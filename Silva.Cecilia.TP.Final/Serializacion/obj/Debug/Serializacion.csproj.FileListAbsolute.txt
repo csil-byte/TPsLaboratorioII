@@ -1,6 +1,0 @@
-C:\Users\user\source\repos\TPs\Silva.Cecilia.TP.Final\Serializacion\bin\Debug\Serializacion.dll
-C:\Users\user\source\repos\TPs\Silva.Cecilia.TP.Final\Serializacion\bin\Debug\Serializacion.pdb
-C:\Users\user\source\repos\TPs\Silva.Cecilia.TP.Final\Serializacion\obj\Debug\Serializacion.csproj.AssemblyReference.cache
-C:\Users\user\source\repos\TPs\Silva.Cecilia.TP.Final\Serializacion\obj\Debug\Serializacion.csproj.CoreCompileInputs.cache
-C:\Users\user\source\repos\TPs\Silva.Cecilia.TP.Final\Serializacion\obj\Debug\Serializacion.dll
-C:\Users\user\source\repos\TPs\Silva.Cecilia.TP.Final\Serializacion\obj\Debug\Serializacion.pdb
