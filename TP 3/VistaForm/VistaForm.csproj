@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{73D01991-B0B6-4B96-80E6-F924AD529462}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>VistaForm</RootNamespace>
+    <AssemblyName>VistaForm</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Nuevas Ediciones\Frm_CircularClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nuevas Ediciones\Frm_CircularClientes.Designer.cs">
+      <DependentUpon>Frm_CircularClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Mercaderia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Mercaderia.Designer.cs">
+      <DependentUpon>Frm_Mercaderia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nuevas Ediciones\Frm_NuevasEdiciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nuevas Ediciones\Frm_NuevasEdiciones.Designer.cs">
+      <DependentUpon>Frm_NuevasEdiciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nuevas Ediciones\InformeCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nuevas Ediciones\InformeCompras.Designer.cs">
+      <DependentUpon>InformeCompras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stock_Dtgv.cs" />
+    <Compile Include="Stock\Frm_Stock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stock\Frm_Stock.Designer.cs">
+      <DependentUpon>Frm_Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Nuevas Ediciones\Frm_CircularClientes.resx">
+      <DependentUpon>Frm_CircularClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Mercaderia.resx">
+      <DependentUpon>Frm_Mercaderia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nuevas Ediciones\Frm_NuevasEdiciones.resx">
+      <DependentUpon>Frm_NuevasEdiciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stock\Frm_Stock.resx">
+      <DependentUpon>Frm_Stock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nuevas Ediciones\InformeCompras.resx">
+      <DependentUpon>InformeCompras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Entidades\Entidades.csproj">
+      <Project>{88aa157e-51e0-43b9-b03d-f543bcdd86fe}</Project>
+      <Name>Entidades</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Serializacion\Serializacion.csproj">
+      <Project>{4104abff-2600-49be-9ef8-33b26ae51a58}</Project>
+      <Name>Serializacion</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMAGENES\MSLTD %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMAGENES\blue-2700749_1280.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMAGENES\110122374-vintage-compass-rose-isolated-icon-travel-and-nautical-navigation-design-black-and-white-retro-diagr.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMAGENES\2469455-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMAGENES\3102353-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMAGENES\424-4245488_png-file-return-arrow-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMAGENES\power-off-458936.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMAGENES\1200px-Home_Icon.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMAGENES\ship-3619166_960_720.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
