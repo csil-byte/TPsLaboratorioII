@@ -51,6 +51,9 @@ namespace VistaForm
             serializadoraTxtPublicacion = new SerializadoraTxt<Publicacion>();
             serializadoraTxtCarta = new SerializadoraTxt<Carta>();
             stock_Dtgv = new Stock_Dtgv<Publicacion, Carta, Barco>();
+
+            txtAbrirCartas.Text = "Favor abrir listado de cartas";
+            txtAbrirPub.Text = "Favor abrir listado de publicaciones";
         }
         
         private void OpenPublicaciones_btnEventPublicaciones(object sender, EventArgs e)
@@ -59,11 +62,14 @@ namespace VistaForm
             {
                 FrmNuevasEdiciones_ElegirTabla formElegirTabla = new FrmNuevasEdiciones_ElegirTabla();
                 NombreDelegado nombreDelegado = new NombreDelegado(formElegirTabla.Publicaciones_CargarLstBox);
+                
                 nombreDelegado();
 
                 formElegirTabla.ShowDialog();
                 stock_Dtgv.Add(publicaciones_dtgvFNE, Stock.nuevasEdiciones_Publicaciones);
                 flagBtnPub = true;
+
+                txtAbrirPub.Visible = false;
             }
             catch (Exception ex)
             {
@@ -81,6 +87,8 @@ namespace VistaForm
                 formElegirTabla.ShowDialog();
                 stock_Dtgv.Add(cartas_dtgvFNE, Stock.nuevasEdiciones_Cartas);
                 flagBtnCarta = true;
+
+                txtAbrirCartas.Visible = false;
             }
             catch(Exception ex)
             {

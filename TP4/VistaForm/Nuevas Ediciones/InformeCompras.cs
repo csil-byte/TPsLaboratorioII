@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using VistaForm;
 using Serializacion;
 using Entidades;
+using VistaForm.Nuevas_Ediciones;
 
 namespace VistaConsola
 {
@@ -47,24 +48,9 @@ namespace VistaConsola
         /// <param name="e"></param>
         private void Btn_guardarArchivo_Click(object sender, EventArgs e)
         {
-            SaveFileDialog saveFileDialog = new SaveFileDialog();
-
-            if (rdoPublicacion.Checked)
-            {
-                SerializadoraXml<List<Publicacion>> serializadoraPub = new SerializadoraXml<List<Publicacion>>();
-                if (saveFileDialog.ShowDialog() == DialogResult.OK && saveFileDialog.FileName != "")
-                {
-                    serializadoraPub.Guardar(saveFileDialog.FileName, publicacionesInforme);
-                }
-            }
-           else
-            {
-                SerializadoraXml<List<Carta>> serializadoraCarta = new SerializadoraXml<List<Carta>>();
-                if (saveFileDialog.ShowDialog() == DialogResult.OK && saveFileDialog.FileName != "")
-                {
-                    serializadoraCarta.Guardar(saveFileDialog.FileName, cartasInforme);
-                }
-            }
+            FrmInformeCompras_ElegirFormato formElegirFormato = new FrmInformeCompras_ElegirFormato();
+            formElegirFormato.ShowDialog();
+                
         }
         private void PicReturn_Click(object sender, EventArgs e)
         {
@@ -80,13 +66,11 @@ namespace VistaConsola
             }
         }
 
-        private void Btn_circularClientes_Click(object sender, EventArgs e)
-        {
-            
-                Frm_CircularClientes Form2 = new Frm_CircularClientes();
-                Form2.Show();
-           
 
+        private void BtnCircularClientes_Click(object sender, EventArgs e)
+        {
+            Frm_CircularClientes Form2 = new Frm_CircularClientes();
+            Form2.Show();
         }
     }
 }

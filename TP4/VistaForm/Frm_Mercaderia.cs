@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Entidades;
-using VistaConsola;
-using VistaForm;
+
 
 
 namespace VistaForm
@@ -22,7 +14,8 @@ namespace VistaForm
         public Stock stock;
         public Frm_Mercaderia()
         {
-            InitializeComponent();        
+            InitializeComponent();  
+            
         }      
         private void Btn_Stock_Click(object sender, EventArgs e)
         {
@@ -44,24 +37,6 @@ namespace VistaForm
             ControllerDAO.LeerCartas(Stock.Cartas);
             ControllerDAO.LeerClientes(Stock.Clientes);
             ControllerDAO.LeerPublicaciones(Stock.Publicaciones);
-                                
-            foreach (Carta cartita in Stock.Cartas)
-            {
-                listBox1.Items.Add(cartita.Titulo);              
-            }
-            foreach (Publicacion publicacion in Stock.Publicaciones)
-            {
-                listBox2.Items.Add(publicacion.Titulo);
-            }
-            foreach (Clientes cliente in Stock.Clientes)
-            {
-                listBox3.Items.Add(cliente.Nombre);
-            }
-            foreach (Barco barco in Stock.Barcos)
-            {
-                listBox4.Items.Add(barco.NombreBarco);
-            }
-
             Controller.ObtenerBarcosPorCadaCliente(Stock.Clientes, Stock.Barcos);
         }
         private void Btn_Actualizacion_Click(object sender, EventArgs e)

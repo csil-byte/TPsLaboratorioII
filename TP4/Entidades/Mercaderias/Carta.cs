@@ -77,5 +77,17 @@ namespace Entidades
         {
             this.idBarcosCartas = idBarcos;
         }
+
+        public override string ToString()
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(string.Format("Titulo: {0}", this.Titulo));
+            sb.AppendLine(string.Format("Edición: {0}", this.Edicion));
+            sb.AppendLine(string.Format("Código: {0}", this.Codigo));
+            sb.AppendLine(string.Format("Editor: {0}", this.Editor));
+            sb.AppendLine(string.Format("Fecha de corección: {0}", this.FechaCorreccion));
+
+            return sb.ToString();
+        }
     }
 }

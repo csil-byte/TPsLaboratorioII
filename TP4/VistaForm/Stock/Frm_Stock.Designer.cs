@@ -31,7 +31,12 @@ namespace VistaForm
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Stock));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.Publicacion_lblCodigo = new System.Windows.Forms.Label();
             this.Publicacion_lblTitulo = new System.Windows.Forms.Label();
@@ -48,18 +53,20 @@ namespace VistaForm
             this.tabsFrmStock = new System.Windows.Forms.TabControl();
             this.tabPage_Publicaciones = new System.Windows.Forms.TabPage();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.nudPublicacionCantidad = new System.Windows.Forms.NumericUpDown();
+            this.cboTipo = new System.Windows.Forms.ComboBox();
             this.CmboBxPublis_Barcos = new System.Windows.Forms.ComboBox();
             this.CmboBxPublis_Clientes = new System.Windows.Forms.ComboBox();
             this.Publicacion_lblBarcos = new System.Windows.Forms.Label();
             this.Publicacion_lblClientes = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.Publicacion_textBox_Cantidad = new System.Windows.Forms.TextBox();
-            this.lstBoxPublicaciones_Tipo = new System.Windows.Forms.ListBox();
             this.publicaciones_lblTipo = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tabPublicacion_dtgv = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage_Cartas = new System.Windows.Forms.TabPage();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.nudCartaCantidad = new System.Windows.Forms.NumericUpDown();
             this.Cartas_btnBorrar = new System.Windows.Forms.Button();
             this.Cartas_lblFechaCorreccion = new System.Windows.Forms.Label();
             this.Cartas_btnAgregar = new System.Windows.Forms.Button();
@@ -73,38 +80,38 @@ namespace VistaForm
             this.Cartas_lblClientes = new System.Windows.Forms.Label();
             this.Cartas_txtBoxEdicion = new System.Windows.Forms.TextBox();
             this.Cartas_lblCantidad = new System.Windows.Forms.Label();
-            this.Cartas_txtBoxCantidad = new System.Windows.Forms.TextBox();
             this.Cartas_txtBoxTitulo = new System.Windows.Forms.TextBox();
             this.Cartas_lblTitulo = new System.Windows.Forms.Label();
             this.Cartas_txtBoxEditor = new System.Windows.Forms.TextBox();
             this.Cartas_lblEditor = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tabCartas_dtgv = new System.Windows.Forms.DataGridView();
             this.tabPage_Stock = new System.Windows.Forms.TabPage();
             this.tabStock_PublicacionDtgv = new System.Windows.Forms.DataGridView();
             this.tabStock_CartasDtgv = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.tabsFrmStock.SuspendLayout();
             this.tabPage_Publicaciones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPublicacionCantidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabPublicacion_dtgv)).BeginInit();
             this.tabPage_Cartas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCartaCantidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabCartas_dtgv)).BeginInit();
             this.tabPage_Stock.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabStock_PublicacionDtgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabStock_CartasDtgv)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -163,7 +170,7 @@ namespace VistaForm
             this.Publicacion_textBox_Codigo.ImeMode = System.Windows.Forms.ImeMode.Alpha;
             this.Publicacion_textBox_Codigo.Location = new System.Drawing.Point(92, 13);
             this.Publicacion_textBox_Codigo.Name = "Publicacion_textBox_Codigo";
-            this.Publicacion_textBox_Codigo.Size = new System.Drawing.Size(253, 26);
+            this.Publicacion_textBox_Codigo.Size = new System.Drawing.Size(232, 26);
             this.Publicacion_textBox_Codigo.TabIndex = 1;
             // 
             // Publicacion_textBox_Titulo
@@ -172,9 +179,9 @@ namespace VistaForm
             this.Publicacion_textBox_Titulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Publicacion_textBox_Titulo.ForeColor = System.Drawing.SystemColors.Control;
             this.Publicacion_textBox_Titulo.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.Publicacion_textBox_Titulo.Location = new System.Drawing.Point(92, 113);
+            this.Publicacion_textBox_Titulo.Location = new System.Drawing.Point(92, 114);
             this.Publicacion_textBox_Titulo.Name = "Publicacion_textBox_Titulo";
-            this.Publicacion_textBox_Titulo.Size = new System.Drawing.Size(253, 26);
+            this.Publicacion_textBox_Titulo.Size = new System.Drawing.Size(232, 26);
             this.Publicacion_textBox_Titulo.TabIndex = 7;
             // 
             // Publicacion_textBox_Edicion
@@ -185,7 +192,7 @@ namespace VistaForm
             this.Publicacion_textBox_Edicion.ImeMode = System.Windows.Forms.ImeMode.Alpha;
             this.Publicacion_textBox_Edicion.Location = new System.Drawing.Point(92, 48);
             this.Publicacion_textBox_Edicion.Name = "Publicacion_textBox_Edicion";
-            this.Publicacion_textBox_Edicion.Size = new System.Drawing.Size(253, 26);
+            this.Publicacion_textBox_Edicion.Size = new System.Drawing.Size(232, 26);
             this.Publicacion_textBox_Edicion.TabIndex = 3;
             // 
             // Publicacion_textBox_Editor
@@ -196,7 +203,7 @@ namespace VistaForm
             this.Publicacion_textBox_Editor.ImeMode = System.Windows.Forms.ImeMode.Alpha;
             this.Publicacion_textBox_Editor.Location = new System.Drawing.Point(92, 149);
             this.Publicacion_textBox_Editor.Name = "Publicacion_textBox_Editor";
-            this.Publicacion_textBox_Editor.Size = new System.Drawing.Size(253, 26);
+            this.Publicacion_textBox_Editor.Size = new System.Drawing.Size(232, 26);
             this.Publicacion_textBox_Editor.TabIndex = 9;
             // 
             // Publicacion_btnAgregar
@@ -217,7 +224,7 @@ namespace VistaForm
             this.Publicacion_btnBorrar.BackColor = System.Drawing.SystemColors.WindowText;
             this.Publicacion_btnBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Publicacion_btnBorrar.ForeColor = System.Drawing.SystemColors.Window;
-            this.Publicacion_btnBorrar.Location = new System.Drawing.Point(206, 359);
+            this.Publicacion_btnBorrar.Location = new System.Drawing.Point(196, 359);
             this.Publicacion_btnBorrar.Name = "Publicacion_btnBorrar";
             this.Publicacion_btnBorrar.Size = new System.Drawing.Size(128, 37);
             this.Publicacion_btnBorrar.TabIndex = 15;
@@ -244,7 +251,7 @@ namespace VistaForm
             this.Publicacion_textBox_Tomo.ImeMode = System.Windows.Forms.ImeMode.Alpha;
             this.Publicacion_textBox_Tomo.Location = new System.Drawing.Point(92, 225);
             this.Publicacion_textBox_Tomo.Name = "Publicacion_textBox_Tomo";
-            this.Publicacion_textBox_Tomo.Size = new System.Drawing.Size(253, 26);
+            this.Publicacion_textBox_Tomo.Size = new System.Drawing.Size(232, 26);
             this.Publicacion_textBox_Tomo.TabIndex = 13;
             // 
             // tabsFrmStock
@@ -288,6 +295,8 @@ namespace VistaForm
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.BackColor = System.Drawing.SystemColors.Desktop;
+            this.splitContainer1.Panel1.Controls.Add(this.nudPublicacionCantidad);
+            this.splitContainer1.Panel1.Controls.Add(this.cboTipo);
             this.splitContainer1.Panel1.Controls.Add(this.CmboBxPublis_Barcos);
             this.splitContainer1.Panel1.Controls.Add(this.Publicacion_btnBorrar);
             this.splitContainer1.Panel1.Controls.Add(this.Publicacion_textBox_Titulo);
@@ -301,10 +310,8 @@ namespace VistaForm
             this.splitContainer1.Panel1.Controls.Add(this.Publicacion_lblEdicion);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.Publicacion_lblTomo);
-            this.splitContainer1.Panel1.Controls.Add(this.Publicacion_textBox_Cantidad);
             this.splitContainer1.Panel1.Controls.Add(this.Publicacion_textBox_Editor);
             this.splitContainer1.Panel1.Controls.Add(this.Publicacion_textBox_Tomo);
-            this.splitContainer1.Panel1.Controls.Add(this.lstBoxPublicaciones_Tipo);
             this.splitContainer1.Panel1.Controls.Add(this.Publicacion_textBox_Codigo);
             this.splitContainer1.Panel1.Controls.Add(this.publicaciones_lblTipo);
             this.splitContainer1.Panel1.Controls.Add(this.Publicacion_textBox_Edicion);
@@ -316,8 +323,38 @@ namespace VistaForm
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.Desktop;
             this.splitContainer1.Panel2.Controls.Add(this.tabPublicacion_dtgv);
             this.splitContainer1.Size = new System.Drawing.Size(1090, 428);
-            this.splitContainer1.SplitterDistance = 358;
+            this.splitContainer1.SplitterDistance = 341;
             this.splitContainer1.TabIndex = 30;
+            // 
+            // nudPublicacionCantidad
+            // 
+            this.nudPublicacionCantidad.Location = new System.Drawing.Point(92, 185);
+            this.nudPublicacionCantidad.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudPublicacionCantidad.Name = "nudPublicacionCantidad";
+            this.nudPublicacionCantidad.Size = new System.Drawing.Size(120, 31);
+            this.nudPublicacionCantidad.TabIndex = 32;
+            this.nudPublicacionCantidad.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // cboTipo
+            // 
+            this.cboTipo.BackColor = System.Drawing.SystemColors.WindowText;
+            this.cboTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboTipo.ForeColor = System.Drawing.SystemColors.Window;
+            this.cboTipo.FormattingEnabled = true;
+            this.cboTipo.ImeMode = System.Windows.Forms.ImeMode.Alpha;
+            this.cboTipo.Location = new System.Drawing.Point(92, 80);
+            this.cboTipo.Name = "cboTipo";
+            this.cboTipo.Size = new System.Drawing.Size(232, 28);
+            this.cboTipo.TabIndex = 31;
             // 
             // CmboBxPublis_Barcos
             // 
@@ -329,8 +366,9 @@ namespace VistaForm
             this.CmboBxPublis_Barcos.ImeMode = System.Windows.Forms.ImeMode.Alpha;
             this.CmboBxPublis_Barcos.Location = new System.Drawing.Point(92, 307);
             this.CmboBxPublis_Barcos.Name = "CmboBxPublis_Barcos";
-            this.CmboBxPublis_Barcos.Size = new System.Drawing.Size(253, 28);
+            this.CmboBxPublis_Barcos.Size = new System.Drawing.Size(232, 28);
             this.CmboBxPublis_Barcos.TabIndex = 28;
+            this.CmboBxPublis_Barcos.SelectedValueChanged += new System.EventHandler(this.CmboBxPublis_Barcos_SelectedValueChanged);
             // 
             // CmboBxPublis_Clientes
             // 
@@ -340,9 +378,9 @@ namespace VistaForm
             this.CmboBxPublis_Clientes.ForeColor = System.Drawing.SystemColors.Window;
             this.CmboBxPublis_Clientes.FormattingEnabled = true;
             this.CmboBxPublis_Clientes.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.CmboBxPublis_Clientes.Location = new System.Drawing.Point(92, 262);
+            this.CmboBxPublis_Clientes.Location = new System.Drawing.Point(92, 259);
             this.CmboBxPublis_Clientes.Name = "CmboBxPublis_Clientes";
-            this.CmboBxPublis_Clientes.Size = new System.Drawing.Size(253, 28);
+            this.CmboBxPublis_Clientes.Size = new System.Drawing.Size(232, 28);
             this.CmboBxPublis_Clientes.TabIndex = 27;
             this.CmboBxPublis_Clientes.SelectedValueChanged += new System.EventHandler(this.CmboBoxPublicacionesClientes_Click);
             // 
@@ -379,30 +417,6 @@ namespace VistaForm
             this.label2.TabIndex = 10;
             this.label2.Text = "Cantidad";
             // 
-            // Publicacion_textBox_Cantidad
-            // 
-            this.Publicacion_textBox_Cantidad.BackColor = System.Drawing.SystemColors.WindowText;
-            this.Publicacion_textBox_Cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Publicacion_textBox_Cantidad.ForeColor = System.Drawing.SystemColors.Window;
-            this.Publicacion_textBox_Cantidad.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.Publicacion_textBox_Cantidad.Location = new System.Drawing.Point(92, 191);
-            this.Publicacion_textBox_Cantidad.Name = "Publicacion_textBox_Cantidad";
-            this.Publicacion_textBox_Cantidad.Size = new System.Drawing.Size(253, 26);
-            this.Publicacion_textBox_Cantidad.TabIndex = 11;
-            // 
-            // lstBoxPublicaciones_Tipo
-            // 
-            this.lstBoxPublicaciones_Tipo.BackColor = System.Drawing.SystemColors.WindowText;
-            this.lstBoxPublicaciones_Tipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstBoxPublicaciones_Tipo.ForeColor = System.Drawing.SystemColors.Control;
-            this.lstBoxPublicaciones_Tipo.FormattingEnabled = true;
-            this.lstBoxPublicaciones_Tipo.ImeMode = System.Windows.Forms.ImeMode.Alpha;
-            this.lstBoxPublicaciones_Tipo.ItemHeight = 20;
-            this.lstBoxPublicaciones_Tipo.Location = new System.Drawing.Point(92, 79);
-            this.lstBoxPublicaciones_Tipo.Name = "lstBoxPublicaciones_Tipo";
-            this.lstBoxPublicaciones_Tipo.Size = new System.Drawing.Size(253, 24);
-            this.lstBoxPublicaciones_Tipo.TabIndex = 5;
-            // 
             // publicaciones_lblTipo
             // 
             this.publicaciones_lblTipo.AutoSize = true;
@@ -413,6 +427,16 @@ namespace VistaForm
             this.publicaciones_lblTipo.Size = new System.Drawing.Size(39, 20);
             this.publicaciones_lblTipo.TabIndex = 4;
             this.publicaciones_lblTipo.Text = "Tipo";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::VistaForm.Properties.Resources._603_6036837_hero_overlay_green_and_blue_swirl_png_clipart;
+            this.pictureBox2.Location = new System.Drawing.Point(-2, -1);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(368, 405);
+            this.pictureBox2.TabIndex = 29;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // tabPublicacion_dtgv
             // 
@@ -426,18 +450,24 @@ namespace VistaForm
             this.tabPublicacion_dtgv.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
             this.tabPublicacion_dtgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.InfoText;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.tabPublicacion_dtgv.DefaultCellStyle = dataGridViewCellStyle1;
             this.tabPublicacion_dtgv.GridColor = System.Drawing.SystemColors.Window;
-            this.tabPublicacion_dtgv.Location = new System.Drawing.Point(5, 6);
+            this.tabPublicacion_dtgv.Location = new System.Drawing.Point(3, 6);
             this.tabPublicacion_dtgv.Name = "tabPublicacion_dtgv";
             this.tabPublicacion_dtgv.ReadOnly = true;
-            this.tabPublicacion_dtgv.Size = new System.Drawing.Size(594, 398);
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.tabPublicacion_dtgv.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.tabPublicacion_dtgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tabPublicacion_dtgv.Size = new System.Drawing.Size(613, 398);
             this.tabPublicacion_dtgv.TabIndex = 29;
             // 
             // label1
@@ -470,6 +500,7 @@ namespace VistaForm
             // splitContainer2.Panel1
             // 
             this.splitContainer2.Panel1.BackColor = System.Drawing.SystemColors.MenuText;
+            this.splitContainer2.Panel1.Controls.Add(this.nudCartaCantidad);
             this.splitContainer2.Panel1.Controls.Add(this.Cartas_btnBorrar);
             this.splitContainer2.Panel1.Controls.Add(this.Cartas_lblFechaCorreccion);
             this.splitContainer2.Panel1.Controls.Add(this.Cartas_btnAgregar);
@@ -483,7 +514,6 @@ namespace VistaForm
             this.splitContainer2.Panel1.Controls.Add(this.Cartas_lblClientes);
             this.splitContainer2.Panel1.Controls.Add(this.Cartas_txtBoxEdicion);
             this.splitContainer2.Panel1.Controls.Add(this.Cartas_lblCantidad);
-            this.splitContainer2.Panel1.Controls.Add(this.Cartas_txtBoxCantidad);
             this.splitContainer2.Panel1.Controls.Add(this.Cartas_txtBoxTitulo);
             this.splitContainer2.Panel1.Controls.Add(this.Cartas_lblTitulo);
             this.splitContainer2.Panel1.Controls.Add(this.Cartas_txtBoxEditor);
@@ -495,18 +525,34 @@ namespace VistaForm
             this.splitContainer2.Panel2.BackColor = System.Drawing.SystemColors.WindowText;
             this.splitContainer2.Panel2.Controls.Add(this.tabCartas_dtgv);
             this.splitContainer2.Size = new System.Drawing.Size(1095, 437);
-            this.splitContainer2.SplitterDistance = 357;
+            this.splitContainer2.SplitterDistance = 331;
             this.splitContainer2.TabIndex = 26;
+            // 
+            // nudCartaCantidad
+            // 
+            this.nudCartaCantidad.BackColor = System.Drawing.SystemColors.MenuText;
+            this.nudCartaCantidad.ForeColor = System.Drawing.SystemColors.Window;
+            this.nudCartaCantidad.Location = new System.Drawing.Point(89, 87);
+            this.nudCartaCantidad.Name = "nudCartaCantidad";
+            this.nudCartaCantidad.Size = new System.Drawing.Size(120, 29);
+            this.nudCartaCantidad.TabIndex = 28;
+            this.nudCartaCantidad.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // Cartas_btnBorrar
             // 
+            this.Cartas_btnBorrar.BackColor = System.Drawing.SystemColors.MenuText;
+            this.Cartas_btnBorrar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.Cartas_btnBorrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cartas_btnBorrar.Location = new System.Drawing.Point(196, 372);
+            this.Cartas_btnBorrar.Location = new System.Drawing.Point(193, 368);
             this.Cartas_btnBorrar.Name = "Cartas_btnBorrar";
-            this.Cartas_btnBorrar.Size = new System.Drawing.Size(148, 27);
+            this.Cartas_btnBorrar.Size = new System.Drawing.Size(136, 31);
             this.Cartas_btnBorrar.TabIndex = 14;
             this.Cartas_btnBorrar.Text = "Limpiar";
-            this.Cartas_btnBorrar.UseVisualStyleBackColor = true;
+            this.Cartas_btnBorrar.UseVisualStyleBackColor = false;
             this.Cartas_btnBorrar.Click += new System.EventHandler(this.Cartas_btnBorrarClick);
             // 
             // Cartas_lblFechaCorreccion
@@ -521,13 +567,15 @@ namespace VistaForm
             // 
             // Cartas_btnAgregar
             // 
+            this.Cartas_btnAgregar.BackColor = System.Drawing.SystemColors.MenuText;
+            this.Cartas_btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.Cartas_btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cartas_btnAgregar.Location = new System.Drawing.Point(14, 372);
+            this.Cartas_btnAgregar.Location = new System.Drawing.Point(14, 368);
             this.Cartas_btnAgregar.Name = "Cartas_btnAgregar";
-            this.Cartas_btnAgregar.Size = new System.Drawing.Size(148, 30);
+            this.Cartas_btnAgregar.Size = new System.Drawing.Size(137, 34);
             this.Cartas_btnAgregar.TabIndex = 13;
             this.Cartas_btnAgregar.Text = "Agregar";
-            this.Cartas_btnAgregar.UseVisualStyleBackColor = true;
+            this.Cartas_btnAgregar.UseVisualStyleBackColor = false;
             this.Cartas_btnAgregar.Click += new System.EventHandler(this.Cartas_btnAgregarClick);
             // 
             // Cartas_txtBoxFechaCorreccion
@@ -535,18 +583,21 @@ namespace VistaForm
             this.Cartas_txtBoxFechaCorreccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cartas_txtBoxFechaCorreccion.Location = new System.Drawing.Point(12, 321);
             this.Cartas_txtBoxFechaCorreccion.Name = "Cartas_txtBoxFechaCorreccion";
-            this.Cartas_txtBoxFechaCorreccion.Size = new System.Drawing.Size(331, 26);
+            this.Cartas_txtBoxFechaCorreccion.Size = new System.Drawing.Size(300, 26);
             this.Cartas_txtBoxFechaCorreccion.TabIndex = 12;
             // 
             // CmboBxCartas_Barcos
             // 
+            this.CmboBxCartas_Barcos.BackColor = System.Drawing.SystemColors.MenuText;
             this.CmboBxCartas_Barcos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmboBxCartas_Barcos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmboBxCartas_Barcos.ForeColor = System.Drawing.SystemColors.Window;
             this.CmboBxCartas_Barcos.FormattingEnabled = true;
             this.CmboBxCartas_Barcos.Location = new System.Drawing.Point(89, 263);
             this.CmboBxCartas_Barcos.Name = "CmboBxCartas_Barcos";
-            this.CmboBxCartas_Barcos.Size = new System.Drawing.Size(255, 28);
+            this.CmboBxCartas_Barcos.Size = new System.Drawing.Size(223, 28);
             this.CmboBxCartas_Barcos.TabIndex = 25;
+            this.CmboBxCartas_Barcos.SelectedValueChanged += new System.EventHandler(this.CmboBxCartas_Barcos_SelectedValueChanged);
             // 
             // Cartas_lblCodigo
             // 
@@ -570,12 +621,14 @@ namespace VistaForm
             // 
             // CmboBxCartas_Clientes
             // 
+            this.CmboBxCartas_Clientes.BackColor = System.Drawing.SystemColors.MenuText;
             this.CmboBxCartas_Clientes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CmboBxCartas_Clientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CmboBxCartas_Clientes.ForeColor = System.Drawing.SystemColors.Window;
             this.CmboBxCartas_Clientes.FormattingEnabled = true;
             this.CmboBxCartas_Clientes.Location = new System.Drawing.Point(88, 218);
             this.CmboBxCartas_Clientes.Name = "CmboBxCartas_Clientes";
-            this.CmboBxCartas_Clientes.Size = new System.Drawing.Size(256, 28);
+            this.CmboBxCartas_Clientes.Size = new System.Drawing.Size(224, 28);
             this.CmboBxCartas_Clientes.TabIndex = 24;
             this.CmboBxCartas_Clientes.SelectedValueChanged += new System.EventHandler(this.CmboBxCartasClientes_Click);
             // 
@@ -591,10 +644,12 @@ namespace VistaForm
             // 
             // Cartas_txtBoxCodigo
             // 
+            this.Cartas_txtBoxCodigo.BackColor = System.Drawing.SystemColors.MenuText;
             this.Cartas_txtBoxCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cartas_txtBoxCodigo.ForeColor = System.Drawing.SystemColors.Window;
             this.Cartas_txtBoxCodigo.Location = new System.Drawing.Point(87, 11);
             this.Cartas_txtBoxCodigo.Name = "Cartas_txtBoxCodigo";
-            this.Cartas_txtBoxCodigo.Size = new System.Drawing.Size(257, 26);
+            this.Cartas_txtBoxCodigo.Size = new System.Drawing.Size(225, 26);
             this.Cartas_txtBoxCodigo.TabIndex = 1;
             // 
             // Cartas_lblClientes
@@ -609,10 +664,12 @@ namespace VistaForm
             // 
             // Cartas_txtBoxEdicion
             // 
+            this.Cartas_txtBoxEdicion.BackColor = System.Drawing.SystemColors.MenuText;
             this.Cartas_txtBoxEdicion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cartas_txtBoxEdicion.ForeColor = System.Drawing.SystemColors.Window;
             this.Cartas_txtBoxEdicion.Location = new System.Drawing.Point(88, 49);
             this.Cartas_txtBoxEdicion.Name = "Cartas_txtBoxEdicion";
-            this.Cartas_txtBoxEdicion.Size = new System.Drawing.Size(256, 26);
+            this.Cartas_txtBoxEdicion.Size = new System.Drawing.Size(224, 26);
             this.Cartas_txtBoxEdicion.TabIndex = 3;
             // 
             // Cartas_lblCantidad
@@ -625,20 +682,14 @@ namespace VistaForm
             this.Cartas_lblCantidad.TabIndex = 4;
             this.Cartas_lblCantidad.Text = "Cantidad";
             // 
-            // Cartas_txtBoxCantidad
-            // 
-            this.Cartas_txtBoxCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cartas_txtBoxCantidad.Location = new System.Drawing.Point(87, 89);
-            this.Cartas_txtBoxCantidad.Name = "Cartas_txtBoxCantidad";
-            this.Cartas_txtBoxCantidad.Size = new System.Drawing.Size(257, 26);
-            this.Cartas_txtBoxCantidad.TabIndex = 5;
-            // 
             // Cartas_txtBoxTitulo
             // 
+            this.Cartas_txtBoxTitulo.BackColor = System.Drawing.SystemColors.MenuText;
             this.Cartas_txtBoxTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cartas_txtBoxTitulo.ForeColor = System.Drawing.SystemColors.Window;
             this.Cartas_txtBoxTitulo.Location = new System.Drawing.Point(87, 130);
             this.Cartas_txtBoxTitulo.Name = "Cartas_txtBoxTitulo";
-            this.Cartas_txtBoxTitulo.Size = new System.Drawing.Size(257, 26);
+            this.Cartas_txtBoxTitulo.Size = new System.Drawing.Size(225, 26);
             this.Cartas_txtBoxTitulo.TabIndex = 8;
             // 
             // Cartas_lblTitulo
@@ -653,10 +704,12 @@ namespace VistaForm
             // 
             // Cartas_txtBoxEditor
             // 
+            this.Cartas_txtBoxEditor.BackColor = System.Drawing.SystemColors.MenuText;
             this.Cartas_txtBoxEditor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cartas_txtBoxEditor.ForeColor = System.Drawing.SystemColors.Window;
             this.Cartas_txtBoxEditor.Location = new System.Drawing.Point(87, 171);
             this.Cartas_txtBoxEditor.Name = "Cartas_txtBoxEditor";
-            this.Cartas_txtBoxEditor.Size = new System.Drawing.Size(257, 26);
+            this.Cartas_txtBoxEditor.Size = new System.Drawing.Size(225, 26);
             this.Cartas_txtBoxEditor.TabIndex = 10;
             // 
             // Cartas_lblEditor
@@ -669,6 +722,15 @@ namespace VistaForm
             this.Cartas_lblEditor.TabIndex = 9;
             this.Cartas_lblEditor.Text = "Editor";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::VistaForm.Properties.Resources._603_6036837_hero_overlay_green_and_blue_swirl_png_clipart;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(358, 414);
+            this.pictureBox3.TabIndex = 27;
+            this.pictureBox3.TabStop = false;
+            // 
             // tabCartas_dtgv
             // 
             this.tabCartas_dtgv.AllowUserToAddRows = false;
@@ -677,21 +739,29 @@ namespace VistaForm
             this.tabCartas_dtgv.AllowUserToResizeRows = false;
             this.tabCartas_dtgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.tabCartas_dtgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.MenuText;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tabCartas_dtgv.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tabCartas_dtgv.DefaultCellStyle = dataGridViewCellStyle3;
             this.tabCartas_dtgv.Location = new System.Drawing.Point(3, 5);
             this.tabCartas_dtgv.Name = "tabCartas_dtgv";
-            this.tabCartas_dtgv.Size = new System.Drawing.Size(600, 399);
+            this.tabCartas_dtgv.ReadOnly = true;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.tabCartas_dtgv.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.tabCartas_dtgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tabCartas_dtgv.Size = new System.Drawing.Size(627, 399);
             this.tabCartas_dtgv.TabIndex = 16;
             // 
             // tabPage_Stock
             // 
+            this.tabPage_Stock.BackColor = System.Drawing.SystemColors.WindowText;
             this.tabPage_Stock.Controls.Add(this.tabStock_PublicacionDtgv);
             this.tabPage_Stock.Controls.Add(this.tabStock_CartasDtgv);
             this.tabPage_Stock.Controls.Add(this.menuStrip1);
@@ -700,7 +770,6 @@ namespace VistaForm
             this.tabPage_Stock.Size = new System.Drawing.Size(1091, 569);
             this.tabPage_Stock.TabIndex = 2;
             this.tabPage_Stock.Text = "Stock";
-            this.tabPage_Stock.UseVisualStyleBackColor = true;
             // 
             // tabStock_PublicacionDtgv
             // 
@@ -710,9 +779,24 @@ namespace VistaForm
             this.tabStock_PublicacionDtgv.AllowUserToResizeRows = false;
             this.tabStock_PublicacionDtgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.tabStock_PublicacionDtgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabStock_PublicacionDtgv.Location = new System.Drawing.Point(6, 85);
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tabStock_PublicacionDtgv.DefaultCellStyle = dataGridViewCellStyle5;
+            this.tabStock_PublicacionDtgv.Location = new System.Drawing.Point(6, 91);
             this.tabStock_PublicacionDtgv.Name = "tabStock_PublicacionDtgv";
-            this.tabStock_PublicacionDtgv.Size = new System.Drawing.Size(957, 183);
+            this.tabStock_PublicacionDtgv.ReadOnly = true;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.tabStock_PublicacionDtgv.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.tabStock_PublicacionDtgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tabStock_PublicacionDtgv.Size = new System.Drawing.Size(957, 154);
             this.tabStock_PublicacionDtgv.TabIndex = 2;
             // 
             // tabStock_CartasDtgv
@@ -723,9 +807,24 @@ namespace VistaForm
             this.tabStock_CartasDtgv.AllowUserToResizeRows = false;
             this.tabStock_CartasDtgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.tabStock_CartasDtgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tabStock_CartasDtgv.Location = new System.Drawing.Point(6, 274);
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tabStock_CartasDtgv.DefaultCellStyle = dataGridViewCellStyle7;
+            this.tabStock_CartasDtgv.Location = new System.Drawing.Point(6, 249);
             this.tabStock_CartasDtgv.Name = "tabStock_CartasDtgv";
-            this.tabStock_CartasDtgv.Size = new System.Drawing.Size(957, 183);
+            this.tabStock_CartasDtgv.ReadOnly = true;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            this.tabStock_CartasDtgv.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.tabStock_CartasDtgv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tabStock_CartasDtgv.Size = new System.Drawing.Size(957, 154);
             this.tabStock_CartasDtgv.TabIndex = 3;
             // 
             // menuStrip1
@@ -745,25 +844,6 @@ namespace VistaForm
             this.pictureBox1.Size = new System.Drawing.Size(999, 60);
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(-2, -1);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(360, 405);
-            this.pictureBox2.TabIndex = 29;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::VistaForm.Properties.Resources._603_6036837_hero_overlay_green_and_blue_swirl_png_clipart;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(358, 414);
-            this.pictureBox3.TabIndex = 27;
-            this.pictureBox3.TabStop = false;
             // 
             // Frm_Stock
             // 
@@ -787,6 +867,8 @@ namespace VistaForm
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nudPublicacionCantidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabPublicacion_dtgv)).EndInit();
             this.tabPage_Cartas.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
@@ -794,14 +876,14 @@ namespace VistaForm
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nudCartaCantidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabCartas_dtgv)).EndInit();
             this.tabPage_Stock.ResumeLayout(false);
             this.tabPage_Stock.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabStock_PublicacionDtgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabStock_CartasDtgv)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -836,11 +918,8 @@ namespace VistaForm
         private System.Windows.Forms.Label Cartas_lblTitulo;
         private System.Windows.Forms.TextBox Cartas_txtBoxTitulo;
         private System.Windows.Forms.Label Cartas_lblFechaCorreccion;
-        private System.Windows.Forms.TextBox Publicacion_textBox_Cantidad;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox Cartas_txtBoxCantidad;
         private System.Windows.Forms.Label Cartas_lblCantidad;
-        private System.Windows.Forms.ListBox lstBoxPublicaciones_Tipo;
         private System.Windows.Forms.Label publicaciones_lblTipo;
         private System.Windows.Forms.DateTimePicker Cartas_txtBoxFechaCorreccion;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
@@ -862,6 +941,9 @@ namespace VistaForm
         private System.Windows.Forms.SplitContainer splitContainer2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.ComboBox cboTipo;
+        private System.Windows.Forms.NumericUpDown nudPublicacionCantidad;
+        private System.Windows.Forms.NumericUpDown nudCartaCantidad;
     }
 }
 

@@ -17,7 +17,7 @@ namespace VistaForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_Mercaderia());
+            Application.Run(new FrmInicioPrograma());
 
         }
     }

@@ -62,3 +62,7 @@ C:\Users\user\source\repos\TPs\TP4\VistaForm\bin\Debug\LiveCharts.WinForms.xml
 C:\Users\user\source\repos\TPs\TP4\VistaForm\bin\Debug\LiveCharts.Wpf.pdb
 C:\Users\user\source\repos\TPs\TP4\VistaForm\bin\Debug\LiveCharts.Wpf.xml
 C:\Users\user\source\repos\TPs\TP4\VistaForm\obj\Debug\VistaForm.Nuevas_Ediciones.FrmNuevasEdiciones_ElegirTabla.resources
+C:\Users\user\source\repos\TPs\TP4\VistaForm\obj\Debug\VistaForm.Nuevas_Ediciones.FrmInformeCompras_ElegirFormato.resources
+C:\Users\user\source\repos\TPs\TP4\VistaForm\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\user\source\repos\TPs\TP4\VistaForm\bin\Debug\itextsharp.dll
+C:\Users\user\source\repos\TPs\TP4\VistaForm\bin\Debug\itextsharp.xml

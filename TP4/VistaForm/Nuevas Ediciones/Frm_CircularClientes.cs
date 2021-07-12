@@ -29,6 +29,8 @@ namespace VistaConsola
         private void Frm_CircularClientes_Load(object sender, EventArgs e)
         {
             CargarTreeView();
+            rchTxtBox_info.Text = string.Empty;
+            txtBox_nombre.Text = "Seleccionar cliente";
         }
         /// <summary>
         /// Genera stringbuilder para el richtextbox
@@ -76,7 +78,7 @@ namespace VistaConsola
             if (treeView1.SelectedNode.Level != 0)
             {
                 txtBox_nombre.Text = treeView1.SelectedNode.Text;
-                RevisarIgualdadBarcoSeleccionado();             ///////// acá rompe 
+                RevisarIgualdadBarcoSeleccionado();            
                 rchTxtBox_info.Text = Cargar_RchTxtBox_Info();
                 stock_Dtgv.Add(dtgv_publicaciones, publicaciones);
                 stock_Dtgv.Add(dtgv_cartas, cartas);              
@@ -92,19 +94,35 @@ namespace VistaConsola
         /// <summary>
         /// Las listas de infomesCompras retornaran al sector de Compras la mercadería a renovar, las listas de circularClientes se encargaran de fijarse de esa mercadería cuales corresponden al barco seleccionado para poder así tener esa información en las listas de este formulario.
         /// </summary>
+        //private void RevisarIgualdadBarcoSeleccionado()
+        //{
+        //    foreach (Clientes clientesito in Stock.Clientes)
+        //    {
+        //        foreach (Barco barquito in clientesito.barcos)
+        //        {
+        //            if (treeView1.SelectedNode.Text == barquito.NombreBarco)
+        //            {
+        //                Stock.RevisarIgualdad(InformeCompras.publicacionesInforme, publicaciones);
+        //                Stock.RevisarIgualdad(InformeCompras.cartasInforme, cartas);
+        //            }
+        //        }
+        //    }
+        //}
         private void RevisarIgualdadBarcoSeleccionado()
         {
-            foreach (Clientes clientesito in Stock.Clientes)
+            foreach (Clientes cliente in Stock.Clientes)
             {
-                foreach (Barco barquito in clientesito.barcos)
+                foreach (Barco barquito in cliente.barcos)
                 {
                     if (treeView1.SelectedNode.Text == barquito.NombreBarco)
                     {
-                        Stock.RevisarIgualdad(InformeCompras.publicacionesInforme, publicaciones);
-                        Stock.RevisarIgualdad(InformeCompras.cartasInforme, cartas);
+                        Stock.RevisarIgualdadBarco(InformeCompras.publicacionesInforme, publicaciones, barquito);
+
+                        Stock.RevisarIgualdadBarco(InformeCompras.cartasInforme, cartas, barquito);
                     }
                 }
             }
+            
         }
         private void Pic_Exit_Click(object sender, EventArgs e)
         {

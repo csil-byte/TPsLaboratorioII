@@ -18,14 +18,9 @@ namespace Entidades
 
         private static void Conectarse()
         {
-            connectionStr = "Server = localhost; Database; TP4; Trusted_Connection=true";
-                //" Server = DESKTOP-SCLI8TL ; Database = TP4; Trusted_Connection = true ; ";
-
-
-            // MI NUEVA CONEXIÓN
+            connectionStr = " Server = DESKTOP-SCLI8TL ; Database = TP4; Trusted_Connection = true ; ";
+                            //" Server = localhost; Database; TP4; Trusted_Connection=true ; ";
             conexion = new SqlConnection(connectionStr);
-
-            // MI NUEVO COMANDO
             comando = new SqlCommand
             {
                 CommandType = CommandType.Text,
@@ -321,7 +316,7 @@ namespace Entidades
         #region Guardar
         public static void GuardarCarta(Carta carta, int idBarco, bool estaDuplicada)
         {
-            int idCarta = EncontrarCartaPorId(carta);
+            
             Conectarse();
             conexion.Open();
 
@@ -332,45 +327,47 @@ namespace Entidades
                 comando.Parameters.AddWithValue("@nombre", carta.Titulo);
                 comando.Parameters.AddWithValue("@editor", carta.Editor);
                 comando.Parameters.AddWithValue("@codigo", carta.Codigo);
-                comando.Parameters.AddWithValue("@cantidad", carta.Cantidad);// add instead of replace
+                comando.Parameters.AddWithValue("@cantidad", carta.Cantidad);
                 comando.Parameters.AddWithValue("@fechaEdicion", carta.FechaCorreccion);
                 comando.Parameters.AddWithValue("@idBarcos", idBarco);
                 comando.ExecuteNonQuery();                
             }
             else
-            {               
-                comando.CommandText = "UPDATE [cartasStock] SET IdBarcos = concat([IdBarcos], ', ', @IdBarcossssss) WHERE IdCarta = @value" ;               
-                //comando.CommandText = "UPDATE [cartasStock] SET Nombre = @nuevoNombre WHERE IdCarta = @value" ;                
+            {
+                int idCarta = EncontrarCartaPorId(carta);
+                comando.CommandText = "UPDATE [cartasStock] SET IdBarcos = concat([IdBarcos], ', ', @IdBarcossssss) WHERE IdCarta = @value" ;                             
                 comando.Parameters.AddWithValue("@value", idCarta);
-                comando.Parameters.AddWithValue("@IdBarcossssss", idBarco.ToString()); //// append instead of replace
-               // comando.Parameters.AddWithValue("@nuevoNombre", "AAAAAAAAAA");
+                comando.Parameters.AddWithValue("@IdBarcossssss", idBarco.ToString());
                 comando.ExecuteNonQuery();
             }
             conexion.Close();
         }
         public static void GuardarPublicacion(Publicacion publicacion, int idBarco, bool estaDuplicada)
         {
-            int idPublicacion = EncontrarPublicacionPorId(publicacion);
+            
             Conectarse();
             conexion.Open();
+            int idPublicacion;
 
             if (estaDuplicada == false)
             {
-                comando.CommandText = "INSERT INTO [publicacionesStock] ([Edicion], [Titulo], [Editor], [Codigo], [Cantidad], [eFormato], [Tomos])" + "Values (@edicion, @titulo, @editor, @codigo, @cantidad, @eFormato, @Tomos)";
+                comando.CommandText = "INSERT INTO [publicacionesStock] ([Edicion], [Titulo], [Editor], [Codigo], [Cantidad], [eFormato], [Tomos], [IdBarcos])" + "Values (@edicion, @titulo, @editor, @codigo, @cantidad, @eFormato, @Tomos, @idBarcos)";
                 comando.Parameters.AddWithValue("@edicion", publicacion.Edicion);
-                comando.Parameters.AddWithValue("@nombre", publicacion.Titulo);
+                comando.Parameters.AddWithValue("@titulo", publicacion.Titulo);
                 comando.Parameters.AddWithValue("@editor", publicacion.Editor);
                 comando.Parameters.AddWithValue("@codigo", publicacion.Codigo);
                 comando.Parameters.AddWithValue("@cantidad", publicacion.Cantidad);// add instead of replace
-                comando.Parameters.AddWithValue("@eFormato", publicacion.eFormato);
+                comando.Parameters.AddWithValue("@eFormato", publicacion.eFormato.ToString());
                 comando.Parameters.AddWithValue("@Tomos", publicacion.Tomos);
+                comando.Parameters.AddWithValue("@idBarcos", idBarco);
                 comando.ExecuteNonQuery();
             }
             else
             {
-                comando.CommandText = "UPDATE [publicacionesStock] SET IdBarcos = concat([IdBarcos], ', ', @IdBarcossssss) WHERE IdCarta = @value";               
+                idPublicacion = EncontrarPublicacionPorId(publicacion);
+                comando.CommandText = "UPDATE [publicacionesStock] SET IdBarcos = concat([IdBarcos], ', ', @IdBarcoss) WHERE IdPublicacion = @value";               
                 comando.Parameters.AddWithValue("@value", idPublicacion);
-                comando.Parameters.AddWithValue("@IdBarcossssss", idBarco.ToString()); //// append instead of replacee
+                comando.Parameters.AddWithValue("@IdBarcoss", idBarco); //// append instead of replace
                 comando.ExecuteNonQuery();
             }
             conexion.Close();
@@ -385,15 +382,12 @@ namespace Entidades
         /// <returns></returns>
         private static int EncontrarPublicacionPorId(Publicacion publicacion)
         {
-            Conectarse();
-            conexion.Open();
             comando.CommandText = "SELECT * FROM dbo.publicacionesStock WHERE [Codigo] = @publicacionCodigo";
-            comando.Parameters.AddWithValue("@cartaCodigo", publicacion.Codigo);
+            comando.Parameters.AddWithValue("@publicacionCodigo", publicacion.Codigo);
             SqlDataReader myReader = comando.ExecuteReader();
             myReader.Read();
             int idPublicacion = Convert.ToInt32(myReader["IdPublicacion"]);
             myReader.Close();
-            conexion.Close();
             return idPublicacion;
         }
         /// <summary>
@@ -403,8 +397,6 @@ namespace Entidades
         /// <returns></returns>
         private static int EncontrarCartaPorId(Carta carta)
         {
-            Conectarse();
-            conexion.Open();
             comando.CommandText = "SELECT * FROM dbo.cartasStock WHERE [Codigo] = @cartaCodigo";
             comando.Parameters.AddWithValue("@cartaCodigo", carta.Codigo);
             SqlDataReader myReader = comando.ExecuteReader();
@@ -412,7 +404,6 @@ namespace Entidades
             myReader.Read();
             idCarta = Convert.ToInt32(myReader["IdCarta"]);
             myReader.Close();
-            conexion.Close();
             return idCarta;
 
         }

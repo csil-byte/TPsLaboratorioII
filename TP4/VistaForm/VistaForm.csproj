@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
     </Reference>
@@ -66,6 +72,12 @@
     </Compile>
     <Compile Include="FrmInicioPrograma.Designer.cs">
       <DependentUpon>FrmInicioPrograma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nuevas Ediciones\FrmInformeCompras_ElegirFormato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nuevas Ediciones\FrmInformeCompras_ElegirFormato.Designer.cs">
+      <DependentUpon>FrmInformeCompras_ElegirFormato.cs</DependentUpon>
     </Compile>
     <Compile Include="Nuevas Ediciones\FrmNuevasEdiciones_ElegirTabla.cs">
       <SubType>Form</SubType>
@@ -108,6 +120,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmInicioPrograma.resx">
       <DependentUpon>FrmInicioPrograma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nuevas Ediciones\FrmInformeCompras_ElegirFormato.resx">
+      <DependentUpon>FrmInformeCompras_ElegirFormato.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nuevas Ediciones\FrmNuevasEdiciones_ElegirTabla.resx">
       <DependentUpon>FrmNuevasEdiciones_ElegirTabla.cs</DependentUpon>
@@ -205,6 +220,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\giphy %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circular cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carta navegacion white.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-image-icon-17.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pdf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\txt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xml.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

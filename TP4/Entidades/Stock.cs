@@ -13,9 +13,6 @@ namespace Entidades
         static public List<Clientes> Clientes;
         static public List<Barco> Barcos;
         private static Stock singleton;
-
-        //private static string rutaClientes = AppDomain.CurrentDomain.BaseDirectory + "listaClientes";
-
         static public List<Publicacion> nuevasEdiciones_Publicaciones = new List<Publicacion>();
         static public List<Carta> nuevasEdiciones_Cartas = new List<Carta>();
 
@@ -66,6 +63,36 @@ namespace Entidades
                 }
             }                            
             return nuevaLista;
+        }
+        public static void RevisarIgualdadBarco(List<Carta> listaRevisar, List<Carta> listaModificar, Barco barco)
+        {
+            foreach (Carta cartaLista in listaRevisar)
+            {
+                foreach (Carta cartaStock in barco.cartas)
+                {
+                    if (cartaStock.Codigo == cartaLista.Codigo)
+                    {
+                        listaModificar.Add(cartaStock);
+                        continue;
+                    }
+                }
+            }
+
+        }
+        public static void RevisarIgualdadBarco(List<Publicacion> listaRevisar, List<Publicacion> listaModificar, Barco barco)
+        {
+            foreach (Publicacion publicacionLista in listaRevisar)
+            {
+                foreach (Publicacion publiStock in barco.publicaciones)
+                {
+                    if (publiStock.Codigo == publicacionLista.Codigo && publiStock.eFormato == publicacionLista.eFormato)
+                    {
+                        listaModificar.Add(publiStock);
+                        continue;
+                    }
+                }
+            }
+           
         }
         /// <summary>
         /// Sobrecarga. Recibe una lista por parámetro y revisa que elementos tiene en común con Stock.Publicaciones, los agrega a una nueva lista y la devuelve.

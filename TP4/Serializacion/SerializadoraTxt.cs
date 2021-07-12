@@ -31,6 +31,29 @@ namespace Serializacion
             return agrega;
         }
 
+        public void Guardar(string pathArchivo, List<T> lista)
+        {
+
+            try
+            {
+                if (pathArchivo != null)
+                {
+                    using (StreamWriter writer = new StreamWriter(pathArchivo))
+                    {
+                        foreach (object objeto in lista)
+                        {
+                            writer.WriteLine(objeto.ToString());
+                            writer.WriteLine("-----------------------------------------------------------------------------------");
+                        }                      
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+        }
+
         public bool Leer(string pathArchivo, out string datos)
         {
             bool agrega = false;

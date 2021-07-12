@@ -118,11 +118,41 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="circular cliente" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\circular cliente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2469455-200" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\IMAGENES\2469455-200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cute round ship" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cute round ship.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giphy (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giphy (1).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="txt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\txt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="carta navegacion white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\carta navegacion white.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="MSLTD (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\IMAGENES\MSLTD (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="603-6036837_hero-overlay-green-and-blue-swirl-png-clipart" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\603-6036837_hero-overlay-green-and-blue-swirl-png-clipart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ship-3619166_960_720" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\IMAGENES\ship-3619166_960_720.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="save-image-icon-17" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\save-image-icon-17.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3102353-200" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\IMAGENES\3102353-200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1200px-Home_Icon.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\IMAGENES\1200px-Home_Icon.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pdf" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pdf.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="110122374-vintage-compass-rose-isolated-icon-travel-and-nautical-navigation-design-black-and-white-retro-diagr" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\IMAGENES\110122374-vintage-compass-rose-isolated-icon-travel-and-nautical-navigation-design-black-and-white-retro-diagr.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,25 +163,13 @@
   <data name="power-off-458936" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\IMAGENES\power-off-458936.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ship-3619166_960_720" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\IMAGENES\ship-3619166_960_720.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="cute round ship" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cute round ship.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2469455-200" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\IMAGENES\2469455-200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="3102353-200" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\IMAGENES\3102353-200.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1200px-Home_Icon.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\IMAGENES\1200px-Home_Icon.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="424-4245488_png-file-return-arrow-icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\IMAGENES\424-4245488_png-file-return-arrow-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="giphy (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\giphy (1).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="603-6036837_hero-overlay-green-and-blue-swirl-png-clipart" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\603-6036837_hero-overlay-green-and-blue-swirl-png-clipart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="xml" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\xml.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

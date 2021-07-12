@@ -29,6 +29,8 @@ namespace VistaForm
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnPublicaciones_abrirArchivo = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.publicaciones_dtgvFNE = new System.Windows.Forms.DataGridView();
@@ -45,6 +47,8 @@ namespace VistaForm
             this.picHome = new System.Windows.Forms.PictureBox();
             this.txtBox_header = new System.Windows.Forms.TextBox();
             this.picBxHeader_nuevasEdiciones = new System.Windows.Forms.PictureBox();
+            this.txtAbrirPub = new System.Windows.Forms.TextBox();
+            this.txtAbrirCartas = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.publicaciones_dtgvFNE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartas_dtgvFNE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -88,6 +92,12 @@ namespace VistaForm
             this.publicaciones_dtgvFNE.Location = new System.Drawing.Point(13, 34);
             this.publicaciones_dtgvFNE.Name = "publicaciones_dtgvFNE";
             this.publicaciones_dtgvFNE.ReadOnly = true;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            this.publicaciones_dtgvFNE.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.publicaciones_dtgvFNE.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.publicaciones_dtgvFNE.Size = new System.Drawing.Size(643, 170);
             this.publicaciones_dtgvFNE.TabIndex = 3;
             // 
@@ -117,6 +127,12 @@ namespace VistaForm
             this.cartas_dtgvFNE.Location = new System.Drawing.Point(13, 214);
             this.cartas_dtgvFNE.Name = "cartas_dtgvFNE";
             this.cartas_dtgvFNE.ReadOnly = true;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.cartas_dtgvFNE.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.cartas_dtgvFNE.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.cartas_dtgvFNE.Size = new System.Drawing.Size(643, 166);
             this.cartas_dtgvFNE.TabIndex = 8;
             // 
@@ -158,6 +174,8 @@ namespace VistaForm
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.WindowText;
+            this.splitContainer1.Panel2.Controls.Add(this.txtAbrirCartas);
+            this.splitContainer1.Panel2.Controls.Add(this.txtAbrirPub);
             this.splitContainer1.Panel2.Controls.Add(this.txtBox_header);
             this.splitContainer1.Panel2.Controls.Add(this.btn_generarInforme);
             this.splitContainer1.Panel2.Controls.Add(this.cartas_dtgvFNE);
@@ -196,10 +214,10 @@ namespace VistaForm
             // 
             this.pictureBox5.BackColor = System.Drawing.SystemColors.Control;
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox5.Image = global::VistaForm.Properties.Resources.ship_3619166_960_720;
+            this.pictureBox5.Image = global::VistaForm.Properties.Resources.carta_navegacion_white;
             this.pictureBox5.Location = new System.Drawing.Point(13, 264);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(167, 47);
+            this.pictureBox5.Size = new System.Drawing.Size(167, 53);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 18;
             this.pictureBox5.TabStop = false;
@@ -211,7 +229,7 @@ namespace VistaForm
             this.pictureBox4.Image = global::VistaForm.Properties.Resources._2469455_200;
             this.pictureBox4.Location = new System.Drawing.Point(13, 157);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(167, 47);
+            this.pictureBox4.Size = new System.Drawing.Size(167, 52);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 17;
             this.pictureBox4.TabStop = false;
@@ -223,7 +241,7 @@ namespace VistaForm
             this.picExit.Image = global::VistaForm.Properties.Resources.power_off_458936;
             this.picExit.Location = new System.Drawing.Point(13, 374);
             this.picExit.Name = "picExit";
-            this.picExit.Size = new System.Drawing.Size(167, 46);
+            this.picExit.Size = new System.Drawing.Size(167, 50);
             this.picExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picExit.TabIndex = 16;
             this.picExit.TabStop = false;
@@ -236,7 +254,7 @@ namespace VistaForm
             this.picHome.Image = global::VistaForm.Properties.Resources._1200px_Home_Icon_svg;
             this.picHome.Location = new System.Drawing.Point(13, 54);
             this.picHome.Name = "picHome";
-            this.picHome.Size = new System.Drawing.Size(167, 47);
+            this.picHome.Size = new System.Drawing.Size(167, 51);
             this.picHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picHome.TabIndex = 16;
             this.picHome.TabStop = false;
@@ -265,6 +283,32 @@ namespace VistaForm
             this.picBxHeader_nuevasEdiciones.Size = new System.Drawing.Size(961, 60);
             this.picBxHeader_nuevasEdiciones.TabIndex = 6;
             this.picBxHeader_nuevasEdiciones.TabStop = false;
+            // 
+            // txtAbrirPub
+            // 
+            this.txtAbrirPub.BackColor = System.Drawing.Color.Black;
+            this.txtAbrirPub.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAbrirPub.ForeColor = System.Drawing.Color.White;
+            this.txtAbrirPub.Location = new System.Drawing.Point(78, 84);
+            this.txtAbrirPub.Multiline = true;
+            this.txtAbrirPub.Name = "txtAbrirPub";
+            this.txtAbrirPub.ReadOnly = true;
+            this.txtAbrirPub.Size = new System.Drawing.Size(509, 52);
+            this.txtAbrirPub.TabIndex = 11;
+            this.txtAbrirPub.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtAbrirCartas
+            // 
+            this.txtAbrirCartas.BackColor = System.Drawing.Color.Black;
+            this.txtAbrirCartas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAbrirCartas.ForeColor = System.Drawing.Color.White;
+            this.txtAbrirCartas.Location = new System.Drawing.Point(78, 265);
+            this.txtAbrirCartas.Multiline = true;
+            this.txtAbrirCartas.Name = "txtAbrirCartas";
+            this.txtAbrirCartas.ReadOnly = true;
+            this.txtAbrirCartas.Size = new System.Drawing.Size(509, 52);
+            this.txtAbrirCartas.TabIndex = 12;
+            this.txtAbrirCartas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Frm_NuevasEdiciones
             // 
@@ -310,6 +354,8 @@ namespace VistaForm
         private System.Windows.Forms.TextBox txtBox_header;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnMenuPpal;
+        private System.Windows.Forms.TextBox txtAbrirCartas;
+        private System.Windows.Forms.TextBox txtAbrirPub;
     }
 }
 

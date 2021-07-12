@@ -14,8 +14,7 @@ namespace UnitTest
 {
     [TestClass]
     public class SerializadoraXml_Test
-    {
-        //////////////////////////////////////////////////////////////// USO DE TESTS UNITARIOS
+    {        
 
         SerializadoraXml<List<Publicacion>> serializadoraTesting = new SerializadoraXml<List<Publicacion>>();
 
