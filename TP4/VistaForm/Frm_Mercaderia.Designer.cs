@@ -105,7 +105,10 @@ namespace VistaForm
             this.Controls.Add(this.btn_Actualizacion);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.pictureBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Frm_Mercaderia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mercadería";

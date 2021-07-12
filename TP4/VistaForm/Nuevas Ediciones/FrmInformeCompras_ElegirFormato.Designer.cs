@@ -217,6 +217,9 @@ namespace VistaForm.Nuevas_Ediciones
             this.Controls.Add(this.picXml);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.picFondo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FrmInformeCompras_ElegirFormato";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Elegir formato";

@@ -231,6 +231,9 @@ namespace VistaConsola
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtBox_nombre);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Frm_CircularClientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_CircularClientes";

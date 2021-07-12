@@ -321,6 +321,9 @@ namespace VistaForm
             this.ClientSize = new System.Drawing.Size(888, 511);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.picBxHeader_nuevasEdiciones);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Frm_NuevasEdiciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevas Ediciones";
