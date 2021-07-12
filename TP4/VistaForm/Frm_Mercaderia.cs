@@ -4,21 +4,24 @@ using Entidades;
 
 
 
-namespace VistaForm
-{
-    public partial class Frm_Mercaderia : Form
-    {
+namespace VistaForm {
+    public partial class Frm_Mercaderia : Form {
         //private static string rutaPub = AppDomain.CurrentDomain.BaseDirectory + "listaPublicacionesStock";
         //private static string rutaCartas = AppDomain.CurrentDomain.BaseDirectory + "listaCartasStock";
 
+        private FrmInicioPrograma initForm;
         public Stock stock;
-        public Frm_Mercaderia()
-        {
-            InitializeComponent();  
-            
-        }      
-        private void Btn_Stock_Click(object sender, EventArgs e)
-        {
+        public Frm_Mercaderia() {
+            InitializeComponent();
+
+        }
+
+        /// <summary>
+        /// Abrirá Form Stock
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Btn_Stock_Click(object sender, EventArgs e) {
             Frm_Stock frm_Stock = new Frm_Stock();
             frm_Stock.Show();
 
@@ -30,8 +33,10 @@ namespace VistaForm
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Form_Mercaderia_Load(object sender, EventArgs e)
-        {
+        private void Form_Mercaderia_Load(object sender, EventArgs e) {
+            initForm = new FrmInicioPrograma();
+            initForm.ShowDialog();
+
             stock = Stock.GetStock();
             ControllerDAO.LeerBarcos(Stock.Barcos);
             ControllerDAO.LeerCartas(Stock.Cartas);
@@ -39,10 +44,16 @@ namespace VistaForm
             ControllerDAO.LeerPublicaciones(Stock.Publicaciones);
             Controller.ObtenerBarcosPorCadaCliente(Stock.Clientes, Stock.Barcos);
         }
-        private void Btn_Actualizacion_Click(object sender, EventArgs e)
-        {
+
+        /// <summary>
+        /// Abrirá Form Nuevas Ediciones
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Btn_Actualizacion_Click(object sender, EventArgs e) {
             Frm_NuevasEdiciones frm_NuevasEdiciones = new Frm_NuevasEdiciones();
             frm_NuevasEdiciones.Show();
         }
+
     }
 }

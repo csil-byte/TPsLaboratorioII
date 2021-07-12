@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Entidades
-{
-    public class Clientes
-    {
+namespace Entidades {
+    public class Clientes {
 
         private string nombre;
         public List<Barco> barcos;
@@ -17,48 +12,36 @@ namespace Entidades
         /// <summary>
         /// Propiedad de lectura y escritura para this.nombre
         /// </summary>
-        public string Nombre
-        {
-            get
-            {
+        public string Nombre {
+            get {
                 return this.nombre;
             }
-            set
-            {
+            set {
                 this.nombre = value;
             }
         }
         /// <summary>
         /// Propiedad de lectura y escritura de this.cantidad de barcos
         /// </summary>
-        public int CantidadBarcos
-        {
-            get
-            {
+        public int CantidadBarcos {
+            get {
                 return this.cantidadBarcos;
             }
-            set
-            {
+            set {
                 this.cantidadBarcos = this.barcos.Count();
             }
         }
         /// <summary>
         /// Propiedad para atributo idCliente
         /// </summary>
-        public int IdCliente
-        {
-            get
-            {
+        public int IdCliente {
+            get {
                 return this.idCliente;
             }
-            set
-            {
-                if (value < 1)
-                {
+            set {
+                if (value < 1) {
                     this.idCliente = 1;
-                }
-                else
-                {
+                } else {
                     this.idCliente = value;
                 }
             }
@@ -66,21 +49,18 @@ namespace Entidades
         /// <summary>
         /// Constructor privado que instanciará lista de barcos
         /// </summary>
-        private Clientes()
-        {
+        private Clientes() {
             barcos = new List<Barco>();
         }
         /// <summary>
         /// Constructor de clientes, llamará al constructor privado
         /// </summary>
         /// <param name="nombre"></param>
-        public Clientes(string nombre, int idCliente) : this()
-        {
+        public Clientes(string nombre, int idCliente) : this() {
             this.nombre = nombre;
             this.idCliente = idCliente;
         }
-        public Clientes(string nombre) : this()
-        {
+        public Clientes(string nombre) : this() {
             this.nombre = nombre;
         }
     }

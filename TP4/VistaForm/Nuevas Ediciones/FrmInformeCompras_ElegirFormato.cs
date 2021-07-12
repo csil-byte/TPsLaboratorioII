@@ -1,100 +1,87 @@
-﻿using Entidades;
-using Serializacion;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entidades;
+using Serializacion;
 using VistaConsola;
 
-namespace VistaForm.Nuevas_Ediciones
-{
-    public partial class FrmInformeCompras_ElegirFormato : Form
-    {
-        public FrmInformeCompras_ElegirFormato()
-        {
+namespace VistaForm.Nuevas_Ediciones {
+    public partial class FrmInformeCompras_ElegirFormato : Form {
+
+        private const string FILTROTXT = "txt files(*.txt)|*.txt";
+        private const string FILTROXML = "xml files(*.xml)|*.xml";
+        private const string FILTROPDF = "pdf files(*.pdf)|*.pdf";
+
+        public FrmInformeCompras_ElegirFormato() {
             InitializeComponent();
         }
 
-        private void BtnAceptar_Click(object sender, EventArgs e)
-        {
-            if (rdoXml.Checked || rdoTxt.Checked || rdoPdf.Checked)
-            {
-                if (rdoPublicacion.Checked)
-                {
+        /// <summary>
+        /// Si alguno de los radio button está chequeado, llamará al método correspondiente.
+        /// Si ninguno está abierto, le avisará al usuario.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnAceptar_Click(object sender, EventArgs e) {
+            if (rdoXml.Checked || rdoTxt.Checked || rdoPdf.Checked) {
+                if (rdoPublicacion.Checked) {
                     SeleccionarFormatoPublicaciones();
-                }
-                else
-                {
+                } else {
                     SeleccionarFormatoCartas();
                 }
-            }
-            else
-            {
+            } else {
                 MessageBox.Show("Favor seleccionar un formato para guardar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
-        public void SeleccionarFormatoPublicaciones()
-        {
-            if (rdoXml.Checked)
-            {
+        /// <summary>
+        /// Verifica cual formato está chequeado y guardará una lista de publicaciones según lo chequeado.
+        /// </summary>
+        public void SeleccionarFormatoPublicaciones() {
+            if (rdoXml.Checked) {
+                saveFileDialog.Filter = FILTROXML;
                 SerializadoraXml<List<Publicacion>> serializadoraPub = new SerializadoraXml<List<Publicacion>>();
-                if (saveFileDialog.ShowDialog() == DialogResult.OK && saveFileDialog.FileName != "")
-                {
+                if (saveFileDialog.ShowDialog() == DialogResult.OK && saveFileDialog.FileName != "") {
                     serializadoraPub.Guardar(saveFileDialog.FileName, InformeCompras.publicacionesInforme);
                 }
-            }
-            else if (rdoTxt.Checked)
-            {
+            } else if (rdoTxt.Checked) {
+                saveFileDialog.Filter = FILTROTXT;
                 SerializadoraTxt<Publicacion> serializadoraTexto = new SerializadoraTxt<Publicacion>();
-                if (saveFileDialog.ShowDialog() == DialogResult.OK && saveFileDialog.FileName != "")
-                {
+                if (saveFileDialog.ShowDialog() == DialogResult.OK && saveFileDialog.FileName != "") {
                     serializadoraTexto.Guardar(saveFileDialog.FileName, InformeCompras.publicacionesInforme);
                 }
-            else
-            {
-                    Pdf<Publicacion> pdf = new Pdf<Publicacion>();
-                    if (saveFileDialog.ShowDialog() == DialogResult.OK && saveFileDialog.FileName != "")
-                    {
-                        pdf.CrearPdf(saveFileDialog.FileName, InformeCompras.publicacionesInforme);
-                    }
-                }              
+            } else {
+                saveFileDialog.Filter = FILTROPDF;
+                Pdf<Publicacion> pdf = new Pdf<Publicacion>();
+                if (saveFileDialog.ShowDialog() == DialogResult.OK && saveFileDialog.FileName != "") {
+                    pdf.CrearPdf(saveFileDialog.FileName, InformeCompras.publicacionesInforme);
+                }
             }
         }
 
-        public void SeleccionarFormatoCartas()
-        {
-            if (rdoXml.Checked)
-            {
+        /// <summary>
+        /// Verifica cual formato está chequeado y guardará una lista de cartas según lo chequeado.
+        /// </summary>
+        public void SeleccionarFormatoCartas() {
+            if (rdoXml.Checked) {
+                saveFileDialog.Filter = FILTROXML;
                 SerializadoraXml<List<Carta>> serializadoraCarta = new SerializadoraXml<List<Carta>>();
-                if (saveFileDialog.ShowDialog() == DialogResult.OK && saveFileDialog.FileName != "")
-                {
+                if (saveFileDialog.ShowDialog() == DialogResult.OK && saveFileDialog.FileName != "") {
                     serializadoraCarta.Guardar(saveFileDialog.FileName, InformeCompras.cartasInforme);
                 }
-            }
-            else if (rdoTxt.Checked)
-            {
+            } else if (rdoTxt.Checked) {
+                saveFileDialog.Filter = FILTROTXT;
                 SerializadoraTxt<Carta> serializadoraTexto = new SerializadoraTxt<Carta>();
-                if (saveFileDialog.ShowDialog() == DialogResult.OK && saveFileDialog.FileName != "")
-                {
+                if (saveFileDialog.ShowDialog() == DialogResult.OK && saveFileDialog.FileName != "") {
                     serializadoraTexto.Guardar(saveFileDialog.FileName, InformeCompras.cartasInforme);
                 }
-            }
-            else 
-            {
+            } else {
+                saveFileDialog.Filter = FILTROPDF;
                 Pdf<Carta> pdf = new Pdf<Carta>();
-                if (saveFileDialog.ShowDialog() == DialogResult.OK && saveFileDialog.FileName != "")
-                {
+                if (saveFileDialog.ShowDialog() == DialogResult.OK && saveFileDialog.FileName != "") {
                     pdf.CrearPdf(saveFileDialog.FileName, InformeCompras.cartasInforme);
                 }
             }
-           
-                   
         }
     }
 }

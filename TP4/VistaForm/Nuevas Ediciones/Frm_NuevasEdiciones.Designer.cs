@@ -45,10 +45,10 @@ namespace VistaForm
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.picExit = new System.Windows.Forms.PictureBox();
             this.picHome = new System.Windows.Forms.PictureBox();
+            this.txtAbrirCartas = new System.Windows.Forms.TextBox();
+            this.txtAbrirPub = new System.Windows.Forms.TextBox();
             this.txtBox_header = new System.Windows.Forms.TextBox();
             this.picBxHeader_nuevasEdiciones = new System.Windows.Forms.PictureBox();
-            this.txtAbrirPub = new System.Windows.Forms.TextBox();
-            this.txtAbrirCartas = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.publicaciones_dtgvFNE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartas_dtgvFNE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -196,6 +196,7 @@ namespace VistaForm
             this.btnSalir.TabIndex = 20;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.PicExit_Click);
             // 
             // btnMenuPpal
             // 
@@ -209,6 +210,7 @@ namespace VistaForm
             this.btnMenuPpal.TabIndex = 19;
             this.btnMenuPpal.Text = "Menú Principal";
             this.btnMenuPpal.UseVisualStyleBackColor = true;
+            this.btnMenuPpal.Click += new System.EventHandler(this.PicHome_Click);
             // 
             // pictureBox5
             // 
@@ -221,6 +223,7 @@ namespace VistaForm
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 18;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.OpenCartas_btnEventCartas);
             // 
             // pictureBox4
             // 
@@ -233,6 +236,7 @@ namespace VistaForm
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 17;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.OpenPublicaciones_btnEventPublicaciones);
             // 
             // picExit
             // 
@@ -260,6 +264,32 @@ namespace VistaForm
             this.picHome.TabStop = false;
             this.picHome.Click += new System.EventHandler(this.PicHome_Click);
             // 
+            // txtAbrirCartas
+            // 
+            this.txtAbrirCartas.BackColor = System.Drawing.Color.Black;
+            this.txtAbrirCartas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAbrirCartas.ForeColor = System.Drawing.Color.White;
+            this.txtAbrirCartas.Location = new System.Drawing.Point(78, 265);
+            this.txtAbrirCartas.Multiline = true;
+            this.txtAbrirCartas.Name = "txtAbrirCartas";
+            this.txtAbrirCartas.ReadOnly = true;
+            this.txtAbrirCartas.Size = new System.Drawing.Size(509, 52);
+            this.txtAbrirCartas.TabIndex = 12;
+            this.txtAbrirCartas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtAbrirPub
+            // 
+            this.txtAbrirPub.BackColor = System.Drawing.Color.Black;
+            this.txtAbrirPub.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAbrirPub.ForeColor = System.Drawing.Color.White;
+            this.txtAbrirPub.Location = new System.Drawing.Point(78, 84);
+            this.txtAbrirPub.Multiline = true;
+            this.txtAbrirPub.Name = "txtAbrirPub";
+            this.txtAbrirPub.ReadOnly = true;
+            this.txtAbrirPub.Size = new System.Drawing.Size(509, 52);
+            this.txtAbrirPub.TabIndex = 11;
+            this.txtAbrirPub.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // txtBox_header
             // 
             this.txtBox_header.BackColor = System.Drawing.SystemColors.WindowText;
@@ -283,32 +313,6 @@ namespace VistaForm
             this.picBxHeader_nuevasEdiciones.Size = new System.Drawing.Size(961, 60);
             this.picBxHeader_nuevasEdiciones.TabIndex = 6;
             this.picBxHeader_nuevasEdiciones.TabStop = false;
-            // 
-            // txtAbrirPub
-            // 
-            this.txtAbrirPub.BackColor = System.Drawing.Color.Black;
-            this.txtAbrirPub.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAbrirPub.ForeColor = System.Drawing.Color.White;
-            this.txtAbrirPub.Location = new System.Drawing.Point(78, 84);
-            this.txtAbrirPub.Multiline = true;
-            this.txtAbrirPub.Name = "txtAbrirPub";
-            this.txtAbrirPub.ReadOnly = true;
-            this.txtAbrirPub.Size = new System.Drawing.Size(509, 52);
-            this.txtAbrirPub.TabIndex = 11;
-            this.txtAbrirPub.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // txtAbrirCartas
-            // 
-            this.txtAbrirCartas.BackColor = System.Drawing.Color.Black;
-            this.txtAbrirCartas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAbrirCartas.ForeColor = System.Drawing.Color.White;
-            this.txtAbrirCartas.Location = new System.Drawing.Point(78, 265);
-            this.txtAbrirCartas.Multiline = true;
-            this.txtAbrirCartas.Name = "txtAbrirCartas";
-            this.txtAbrirCartas.ReadOnly = true;
-            this.txtAbrirCartas.Size = new System.Drawing.Size(509, 52);
-            this.txtAbrirCartas.TabIndex = 12;
-            this.txtAbrirCartas.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // Frm_NuevasEdiciones
             // 

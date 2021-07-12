@@ -1,25 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.IO;
-using System.Data.OleDb;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using VistaConsola;
 using Entidades;
 using Serializacion;
+using VistaConsola;
 using VistaForm.Nuevas_Ediciones;
-using System.Threading;
 
-namespace VistaForm
-{
+namespace VistaForm {
     public delegate void NombreDelegado();
-    public partial class Frm_NuevasEdiciones : Form
-    {
+    public partial class Frm_NuevasEdiciones : Form {
         #region creación de objetos, listas y atributos
         private static string rutaNuevasEdiciones_CartasUno = AppDomain.CurrentDomain.BaseDirectory + "cartas_NuevasEdiciones1";
         private static string rutaNuevasEdiciones_CartasDos = AppDomain.CurrentDomain.BaseDirectory + "cartas_NuevasEdiciones2";
@@ -35,8 +24,7 @@ namespace VistaForm
         private bool flagBtnPub = false;
         private bool flagBtnCarta = false;
         #endregion
-        public Frm_NuevasEdiciones()
-        {
+        public Frm_NuevasEdiciones() {
             InitializeComponent();
         }
         /// <summary>
@@ -44,8 +32,7 @@ namespace VistaForm
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Frm_NuevasEdiciones_Load(object sender, EventArgs e)
-        {
+        private void Frm_NuevasEdiciones_Load(object sender, EventArgs e) {
             publicaciones_nuevasEdiciones = new List<Publicacion>();
             cartas_nuevasEdiciones = new List<Carta>();
             serializadoraTxtPublicacion = new SerializadoraTxt<Publicacion>();
@@ -55,31 +42,33 @@ namespace VistaForm
             txtAbrirCartas.Text = "Favor abrir listado de cartas";
             txtAbrirPub.Text = "Favor abrir listado de publicaciones";
         }
-        
-        private void OpenPublicaciones_btnEventPublicaciones(object sender, EventArgs e)
-        {
-            try
-            {
+
+        /// <summary>
+        /// Instanciará formulario para elegir tabla
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OpenPublicaciones_btnEventPublicaciones(object sender, EventArgs e) {
+            try {
                 FrmNuevasEdiciones_ElegirTabla formElegirTabla = new FrmNuevasEdiciones_ElegirTabla();
                 NombreDelegado nombreDelegado = new NombreDelegado(formElegirTabla.Publicaciones_CargarLstBox);
-                
                 nombreDelegado();
-
                 formElegirTabla.ShowDialog();
                 stock_Dtgv.Add(publicaciones_dtgvFNE, Stock.nuevasEdiciones_Publicaciones);
                 flagBtnPub = true;
-
                 txtAbrirPub.Visible = false;
-            }
-            catch (Exception ex)
-            {
+            } catch (Exception ex) {
                 throw ex;
             }
         }
-        private void OpenCartas_btnEventCartas(object sender, EventArgs e)
-        {
-            try
-            {
+
+        /// <summary>
+        /// Instanciará formulario para elegir tabla
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OpenCartas_btnEventCartas(object sender, EventArgs e) {
+            try {
                 FrmNuevasEdiciones_ElegirTabla formElegirTabla = new FrmNuevasEdiciones_ElegirTabla();
                 NombreDelegado nombreDelegado = new NombreDelegado(formElegirTabla.Cartas_CargarLstBox);
                 nombreDelegado();
@@ -89,26 +78,20 @@ namespace VistaForm
                 flagBtnCarta = true;
 
                 txtAbrirCartas.Visible = false;
-            }
-            catch(Exception ex)
-            {
+            } catch (Exception ex) {
                 throw ex;
-            }          
+            }
         }
         /// <summary>
         /// Verifica con una bandera que el usuario haya subido un archivo para poder generar el informe
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Btn_generarInforme_Click(object sender, EventArgs e)
-        {
-            if (flagBtnCarta == true && flagBtnPub == true)
-            {
+        private void Btn_generarInforme_Click(object sender, EventArgs e) {
+            if (flagBtnCarta == true && flagBtnPub == true) {
                 InformeCompras frm_informeCompras = new InformeCompras();
                 frm_informeCompras.Show();
-            }
-            else
-            {
+            } else {
                 MessageBox.Show("Deberá cargar archivos de Publicaciones y de Cartas primero", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -117,22 +100,25 @@ namespace VistaForm
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void PicHome_Click(object sender, EventArgs e)
-        {
+        private void PicHome_Click(object sender, EventArgs e) {
             this.Hide();
         }
-        private void PicExit_Click(object sender, EventArgs e)
-        {
-            DialogResult result =  MessageBox.Show("¿Está seguro que desea salir del programa?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
-            if (result == DialogResult.Yes)
-            {             
+        /// <summary>
+        /// Al hacer click, se cerrará la aplicación
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void PicExit_Click(object sender, EventArgs e) {
+            DialogResult result = MessageBox.Show("¿Está seguro que desea salir del programa?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (result == DialogResult.Yes) {
                 Application.Exit();
             }
         }
-       
-    }
-
-    
 
     }
+
+
+
+}

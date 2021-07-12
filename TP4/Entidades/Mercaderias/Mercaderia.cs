@@ -1,51 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Xml.Serialization;
 
-namespace Entidades
-{
+namespace Entidades {
     [Serializable]
     [XmlInclude(typeof(Carta))]
     [XmlInclude(typeof(Publicacion))]
 
-    public abstract class Mercaderia
-    {
+    public abstract class Mercaderia {
         private string titulo;
         private int edicion;
         private string editor;
         private string codigo;
         private int cantidad;
 
-        /// <summary>
-        /// ////// public?????????????
-        /// </summary>
 
-        
-
-
-
-        //public int this[int i]
-        //{
-        //    get { return idBarcos[i]; }
-        //    set { idBarcos[i] = value; }
-        //}
-        /// <summary>
-        ///  Propiedad para el atributo edicion de lectura y escritura
-        /// </summary>
-        public int Edicion
-        {
-            get
-            {
-                return this.edicion;
-            }
-            set
-            {
-                this.edicion = value;
-            }
-        }
         /// <summary>
         /// Propiedad para el atributo titulo de lectura y escritura
         /// </summary>
@@ -54,51 +22,53 @@ namespace Entidades
             get
             {
                 return this.titulo;
-            } 
+            }
             set
             {
                 this.titulo = value;
             }
         }
         /// <summary>
+        ///  Propiedad para el atributo edicion de lectura y escritura
+        /// </summary>
+        public int Edicion {
+            get {
+                return this.edicion;
+            }
+            set {
+                this.edicion = value;
+            }
+        }
+        /// <summary>
         /// Propiedad para el atributo editor de lectura y escritura
         /// </summary>
-        public string Editor
-        {
-            get
-            {
+        public string Editor {
+            get {
                 return this.editor;
             }
-            set
-            {
+            set {
                 this.editor = value;
             }
         }
         /// <summary>
         /// Propiedad para el atributo código de lectura y escritura
         /// </summary>
-        public string Codigo
-        {
-            get
-            {
+        public string Codigo {
+            get {
                 return this.codigo;
             }
-            set
-            {
+            set {
                 this.codigo = value;
             }
         }
         /// <summary>
         /// Propiedad para el atributo cantidad de lectura y escritura
         /// </summary>
-        public int Cantidad
-        {
-            get
-            {
+        public int Cantidad {
+            get {
                 return this.cantidad;
             }
-            set
-            {
+            set {
                 if (value < 0)
                     this.cantidad = 0;
                 else
@@ -112,8 +82,7 @@ namespace Entidades
         /// <param name="edicion"></param>
         /// <param name="editor"></param>
         /// <param name="codigo"></param>
-        public Mercaderia(string titulo, int edicion, string editor, string codigo, int cantidad)
-        {
+        public Mercaderia(string titulo, int edicion, string editor, string codigo, int cantidad) {
             this.titulo = titulo;
             this.edicion = edicion;
             this.editor = editor;
@@ -123,8 +92,7 @@ namespace Entidades
         /// <summary>
         /// Constructor de defecto para la clase Mercadería
         /// </summary>
-        public Mercaderia()
-        {
+        public Mercaderia() {
         }
 
         public abstract void obtenenerIdBarcos(int[] idBarcos);

@@ -1,30 +1,40 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace VistaForm
 {
+
+    public delegate void InvokeTextBox();
+
     public partial class FrmInicioPrograma : Form
     {
+
+        private event InvokeTextBox InvokeText;
+        private Thread t1;
+
         public FrmInicioPrograma()
         {
             InitializeComponent();
-            Application.EnableVisualStyles();
+            this.InvokeText += TxtBoxCargar;
         }
 
+        /// <summary>
+        /// Iniciará un thread y lo empezará 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FrmInicioPrograma_Load(object sender, EventArgs e)
         {
-            Thread t1 = new Thread(TxtBoxCargar);
+            t1 = new Thread(TxtBoxCargar);
             timerLoading.Start();
-            t1.Start();          
+            t1.Start();
         }
+
+        /// <summary>
+        /// Permitirá acceder al control txtBoxCarga
+        /// </summary>
+        /// <param name="value"></param>
         public void InvocarTextBox(string value)
         {
 
@@ -36,43 +46,67 @@ namespace VistaForm
 
             txtboxCarga.Text = string.Empty;
             txtboxCarga.Text += value;
-            
+
         }
+
+        /// <summary>
+        /// Cargará el textbox
+        /// </summary>
         private void TxtBoxCargar()
         {
             try
             {
                 InvocarTextBox("CARGANDO    LISTAS");
-                Thread.Sleep(500);
+                Thread.Sleep(1000);
                 InvocarTextBox("CARGANDO    CARTAS");
-                Thread.Sleep(500);
+                Thread.Sleep(1000);
                 InvocarTextBox("CARGANDO    BARQUITOS");
-                Thread.Sleep(500);
+                Thread.Sleep(1000);
                 InvocarTextBox("CARGANDO    EL MAR, LAS OLAS");
-                Thread.Sleep(450);
-                InvocarTextBox("CARGANDO    Y EL VIENTO SUCUNDUMSUCUNDUM");               
+                Thread.Sleep(1000);
+                InvocarTextBox("CARGANDO    Y EL VIENTO");
+                Thread.Sleep(1000);
+                InvocarTextBox("CARGANDO    SUCUNDUMSUCUNDUM");
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show(e.Message);
             }
         }
+
+        /// <summary>
+        /// Irá aumentando el progressbar
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TimerLoadingTick(object sender, EventArgs e)
         {
 
-                if (prbLoading.Value < 100)
-                {
-                    prbLoading.Value += 1;
-                }
-                else
-                {
-                    timerLoading.Stop();
-                    Frm_Mercaderia frmMercaderia = new Frm_Mercaderia();
-                    this.Hide();
-                    frmMercaderia.ShowDialog();
-                    
-                }
+            if (prbLoading.Value < 100)
+            {
+                prbLoading.Value += 1;
+            }
+            else
+            {
+                timerLoading.Stop();
+                this.Close();
+            }
 
+        }
+
+        /// <summary>
+        /// Si el hilo está corriendo, lo termina
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FrmInicioPrograma_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.InvokeText -= TxtBoxCargar;
+            if (t1.IsAlive)
+            {
+                t1.Abort();
+            }
         }
     }
 }
+ 

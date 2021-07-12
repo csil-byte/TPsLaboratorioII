@@ -1,16 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Xml;
 using System.Xml.Serialization;
 
 
-namespace Serializacion
-{
-    public class SerializadoraXml<T> : IArchivos<T>
-    {
+namespace Serializacion {
+    public class SerializadoraXml<T> : IArchivos<T> {
 
         //////////////////////////////////////////////////////////////// USO DE EXCEPCIONES
         //////////////////////////////////////////////////////////////// USO DE ARCHIVOS Y SERIALIZACIÓN
@@ -21,26 +16,20 @@ namespace Serializacion
         /// <param name="ruta"></param>
         /// <param name="datos"></param>
         /// <returns></returns>
-        public bool Guardar(string ruta, T datos)
-        {
+        public bool Guardar(string ruta, T datos) {
             bool retorno = false;
 
-            try
-            {
-                if(!string.IsNullOrWhiteSpace(ruta))
-                {
+            try {
+                if (!string.IsNullOrWhiteSpace(ruta)) {
                     XmlSerializer nuevoXml = new XmlSerializer(typeof(T));
 
-                    using (XmlTextWriter newTW = new XmlTextWriter(ruta, Encoding.UTF8))
-                    {
+                    using (XmlTextWriter newTW = new XmlTextWriter(ruta, Encoding.UTF8)) {
                         nuevoXml.Serialize(newTW, datos);
                         retorno = true;
                     }
                 }
-            }
-            catch (Exception e)
-            {
-                throw e; 
+            } catch (Exception e) {
+                throw e;
             }
 
 
@@ -53,29 +42,24 @@ namespace Serializacion
         /// <param name="ruta"></param>
         /// <param name="datos"></param>
         /// <returns></returns>
-        public bool Leer(string ruta, out T datos)
-        {
+        public bool Leer(string ruta, out T datos) {
             bool retorno = false;
-            try
-            {
+            try {
                 XmlSerializer nuevoXml = new XmlSerializer(typeof(T));
 
-                using (XmlTextReader newTR = new XmlTextReader(ruta))
-                { 
+                using (XmlTextReader newTR = new XmlTextReader(ruta)) {
                     datos = (T)nuevoXml.Deserialize(newTR);
                     retorno = true;
                 }
 
-            }
-            catch (Exception e)
-            {
+            } catch (Exception e) {
                 throw new Exception($"Error al querer Leer el achivo desde el archivo: {ruta}.");
             }
-            
+
             return retorno;
         }
 
-        
-        
+
+
     }
 }

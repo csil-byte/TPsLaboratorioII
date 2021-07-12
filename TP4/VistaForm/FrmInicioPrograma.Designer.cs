@@ -41,12 +41,12 @@ namespace VistaForm
             // 
             // prbLoading
             // 
+            this.prbLoading.BackColor = System.Drawing.Color.Black;
             this.prbLoading.Location = new System.Drawing.Point(57, 283);
             this.prbLoading.MarqueeAnimationSpeed = 5;
             this.prbLoading.Name = "prbLoading";
             this.prbLoading.Size = new System.Drawing.Size(261, 31);
             this.prbLoading.Step = 1;
-            this.prbLoading.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.prbLoading.TabIndex = 2;
             // 
             // txtboxCarga
@@ -101,11 +101,13 @@ namespace VistaForm
             this.Controls.Add(this.txtboxCarga);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.headerPic);
-            this.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ForeColor = System.Drawing.Color.Black;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "FrmInicioPrograma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Maritime Solutions LTD";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmInicioPrograma_FormClosing);
             this.Load += new System.EventHandler(this.FrmInicioPrograma_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.headerPic)).EndInit();

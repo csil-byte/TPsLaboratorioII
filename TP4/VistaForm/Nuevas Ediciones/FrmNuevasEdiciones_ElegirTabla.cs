@@ -1,51 +1,52 @@
-﻿using Entidades;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
+using Entidades;
 
-namespace VistaForm.Nuevas_Ediciones
-{
-    public partial class FrmNuevasEdiciones_ElegirTabla : Form
-    {
+namespace VistaForm.Nuevas_Ediciones {
+    public partial class FrmNuevasEdiciones_ElegirTabla : Form {
 
-        public FrmNuevasEdiciones_ElegirTabla()
-        {
+        /// <summary>
+        /// Inicializará el componente
+        /// </summary>
+        public FrmNuevasEdiciones_ElegirTabla() {
             InitializeComponent();
         }
 
-        public void Cartas_CargarLstBox()
-        {
-            lstbxTablas.Items.Add("dbo.cartasNuevasEdiciones1");
-            lstbxTablas.Items.Add("dbo.cartasNuevasEdiciones2");
+        /// <summary>
+        /// Cargará las opciones para cartas
+        /// </summary>
+        public void Cartas_CargarLstBox() {
+            lstbxTablas.Items.Add("Cartas especiales");
+            lstbxTablas.Items.Add("Cartas Río Paraná");
         }
 
-        public void Publicaciones_CargarLstBox()
-        {
-            lstbxTablas.Items.Add("dbo.publicacionesNuevasEdiciones1");
-            lstbxTablas.Items.Add("dbo.publicacionesNuevasEdiciones2");
-        }       
-        private void BtnAceptar_click(object sender, EventArgs e)
-        {
+        /// <summary>
+        /// Cargará las opciones para publicaciones
+        /// </summary>
+        public void Publicaciones_CargarLstBox() {
+            lstbxTablas.Items.Add("Listado de publicaciones especiales");
+            lstbxTablas.Items.Add("Listado de publicaciones ordinarios");
+        }
+
+        /// <summary>
+        /// Según la opción seleccionada, leerá 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnAceptar_click(object sender, EventArgs e) {
             string tablaSeleccionada = lstbxTablas.SelectedItem.ToString();
-            switch (tablaSeleccionada)
-            {
-                case "dbo.cartasNuevasEdiciones1":
-                    ControllerDAO.LeerCartas(Stock.nuevasEdiciones_Cartas, tablaSeleccionada);   
+            switch (tablaSeleccionada) {
+                case "Cartas especiales":
+                    ControllerDAO.LeerCartas(Stock.nuevasEdiciones_Cartas, "dbo.cartasNuevasEdiciones1");
                     break;
-                case "dbo.cartasNuevasEdiciones2":
-                    ControllerDAO.LeerCartas(Stock.nuevasEdiciones_Cartas, tablaSeleccionada);
+                case "Cartas Río Paraná":
+                    ControllerDAO.LeerCartas(Stock.nuevasEdiciones_Cartas, "dbo.cartasNuevasEdiciones2");
                     break;
-                case "dbo.publicacionesNuevasEdiciones1":
-                    ControllerDAO.LeerPublicaciones(Stock.nuevasEdiciones_Publicaciones, tablaSeleccionada);
+                case "Listado de publicaciones especiales":
+                    ControllerDAO.LeerPublicaciones(Stock.nuevasEdiciones_Publicaciones, "dbo.publicacionesNuevasEdiciones1");
                     break;
-                case "dbo.publicacionesNuevasEdiciones2":
-                    ControllerDAO.LeerPublicaciones(Stock.nuevasEdiciones_Publicaciones, tablaSeleccionada);
+                case "Listado de publicaciones ordinarios":
+                    ControllerDAO.LeerPublicaciones(Stock.nuevasEdiciones_Publicaciones, "dbo.publicacionesNuevasEdiciones2");
                     break;
             }
             this.Close();

@@ -1,13 +1,10 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+﻿using System;
 using Entidades;
-using System.Collections.Generic;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace UnitTest
-{
+namespace UnitTest {
     [TestClass]
-    public class ClienteMetodoDeExtension_Test
-    {
+    public class ClienteMetodoDeExtension_Test {
         Clientes cliente1 = new Clientes("Navigation Supplies");
         Barco barco1 = new Barco("Lagoona", Barco.tipoBarco.Bulker);
         Barco barco2 = new Barco("Serra", Barco.tipoBarco.Cargo);
@@ -16,8 +13,7 @@ namespace UnitTest
 
 
         [TestMethod]
-        public void ObtenerBarcosPorCadaCliente_Test()
-        {
+        public void ObtenerBarcosPorCadaCliente_Test() {
             Carta carta1 = new Carta("Río de la Plata Interior", 2018, "SHN", "ARH118", 1, DateTime.Parse("22/02/2018"));
             Carta carta2 = new Carta("Puerto de Buenos Aires", 2018, "SHN", "ARH156", 1, DateTime.Parse("15/03/2018"));
             Carta carta3 = new Carta("Rada y Puerto La Plata", 2016, "SHN", "ARH157", 1, DateTime.Parse("15/05/2016"));
@@ -28,7 +24,7 @@ namespace UnitTest
             cliente1.barcos.Add(barco2);
             barco1.cartas.Add(carta2);
             cliente1.barcos.Add(barco3);
-            barco1.cartas.Add(carta3);           
+            barco1.cartas.Add(carta3);
             cliente1.barcos.Add(barco4);
             barco1.cartas.Add(carta4);
 
@@ -37,8 +33,7 @@ namespace UnitTest
         }
 
         [TestMethod]
-        public void ObtenerPublicacionesPorCadaCliente_Test()
-        {
+        public void ObtenerPublicacionesPorCadaCliente_Test() {
             Publicacion publicacion1 = new Publicacion(1, Publicacion.Formato.Digital, "Waste Assessment Guidelines", 2012, "IMO", "KB531E", 1);
             Publicacion publicacion2 = new Publicacion(2, Publicacion.Formato.Hardbook, "IMDG Code Supplement", 2008, "IMO", "KK210F", 1);
             Publicacion publicacion3 = new Publicacion(2, Publicacion.Formato.Digital, "IMDG Code Supplement", 2008, "IMO", "KK210M", 1);

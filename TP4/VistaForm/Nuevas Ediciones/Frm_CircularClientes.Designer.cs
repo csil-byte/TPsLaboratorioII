@@ -95,6 +95,7 @@ namespace VistaConsola
             this.dtgv_publicaciones.Location = new System.Drawing.Point(218, 276);
             this.dtgv_publicaciones.Name = "dtgv_publicaciones";
             this.dtgv_publicaciones.ReadOnly = true;
+            this.dtgv_publicaciones.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgv_publicaciones.Size = new System.Drawing.Size(638, 146);
             this.dtgv_publicaciones.TabIndex = 2;
             // 
@@ -165,6 +166,7 @@ namespace VistaConsola
             this.dtgv_cartas.Location = new System.Drawing.Point(218, 428);
             this.dtgv_cartas.Name = "dtgv_cartas";
             this.dtgv_cartas.ReadOnly = true;
+            this.dtgv_cartas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgv_cartas.Size = new System.Drawing.Size(638, 164);
             this.dtgv_cartas.TabIndex = 15;
             // 

@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace Entidades
-{
-    public class Barco
-    {
+namespace Entidades {
+    public class Barco {
 
         private string nombreBarco;
         private int idCliente;
@@ -15,8 +9,7 @@ namespace Entidades
         public List<Publicacion> publicaciones;
         public List<Carta> cartas;
 
-        public enum tipoBarco
-        {
+        public enum tipoBarco {
             Tanker,
             Bulker,
             Cargo,
@@ -28,14 +21,11 @@ namespace Entidades
         /// <summary>
         /// Propiedad de lectura y escritura de nombreBarco
         /// </summary>
-        public string NombreBarco
-        {
-            get
-            {
+        public string NombreBarco {
+            get {
                 return this.nombreBarco;
             }
-            set
-            {
+            set {
                 this.nombreBarco = value;
             }
 
@@ -44,27 +34,20 @@ namespace Entidades
         /// <summary>
         /// Propiedad para el enum TipoBarco
         /// </summary>
-        public tipoBarco TipoBarco
-        {
+        public tipoBarco TipoBarco {
             get; set;
         }
         /// <summary>
         /// Propiedad para atributo idCliente
         /// </summary>
-        public int IdCliente
-        {
-            get
-            {
+        public int IdCliente {
+            get {
                 return this.idCliente;
             }
-            set
-            {
-                if (value < 1)
-                {
+            set {
+                if (value < 1) {
                     this.idCliente = 1;
-                }
-                else
-                {
+                } else {
                     this.idCliente = value;
                 }
             }
@@ -72,20 +55,14 @@ namespace Entidades
         /// <summary>
         /// Propiedad para atributo idBarco
         /// </summary>
-        public int IdBarco
-        {
-            get
-            {
+        public int IdBarco {
+            get {
                 return this.idBarco;
             }
-            set
-            {
-                if (value < 1)
-                {
+            set {
+                if (value < 1) {
                     this.idBarco = 1;
-                }
-                else
-                {
+                } else {
                     this.idBarco = value;
                 }
             }
@@ -93,25 +70,22 @@ namespace Entidades
         /// <summary>
         /// Constructor donde se instancian las listas
         /// </summary>
-        private Barco()
-        {
+        private Barco() {
             publicaciones = new List<Publicacion>();
             cartas = new List<Carta>();
-        } 
+        }
         /// <summary>
         /// Constructor de la clase Barco, llama al constructor privado
         /// </summary>
         /// <param name="nombreBarco"></param>
         /// <param name="tipo"></param>
-        public Barco(string nombreBarco, tipoBarco tipo, int idCliente, int idBarco ) : this()
-        {
+        public Barco(string nombreBarco, tipoBarco tipo, int idCliente, int idBarco) : this() {
             this.NombreBarco = nombreBarco;
             this.TipoBarco = tipo;
             this.idCliente = idCliente;
             this.IdBarco = idBarco;
         }
-        public Barco(string nombreBarco, tipoBarco tipo) : this()
-        {
+        public Barco(string nombreBarco, tipoBarco tipo) : this() {
             this.NombreBarco = nombreBarco;
             this.TipoBarco = tipo;
         }

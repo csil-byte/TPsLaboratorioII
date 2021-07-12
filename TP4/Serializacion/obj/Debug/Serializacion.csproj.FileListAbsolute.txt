@@ -14,3 +14,13 @@ C:\Users\user\source\repos\TPs\TP4\Serializacion\bin\Debug\BouncyCastle.Crypto.d
 C:\Users\user\source\repos\TPs\TP4\Serializacion\bin\Debug\itextsharp.dll
 C:\Users\user\source\repos\TPs\TP4\Serializacion\bin\Debug\itextsharp.xml
 C:\Users\user\source\repos\TPs\TP4\Serializacion\obj\Debug\Serializacion.csproj.CopyComplete
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\Serializacion\bin\Debug\Serializacion.dll
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\Serializacion\bin\Debug\Serializacion.pdb
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\Serializacion\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\Serializacion\bin\Debug\itextsharp.dll
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\Serializacion\bin\Debug\itextsharp.xml
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\Serializacion\obj\Debug\Serializacion.csproj.AssemblyReference.cache
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\Serializacion\obj\Debug\Serializacion.csproj.CoreCompileInputs.cache
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\Serializacion\obj\Debug\Serializacion.csproj.CopyComplete
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\Serializacion\obj\Debug\Serializacion.dll
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\Serializacion\obj\Debug\Serializacion.pdb

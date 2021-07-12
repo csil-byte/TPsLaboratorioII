@@ -292,7 +292,7 @@ namespace VistaConsola
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(901, 570);
+            this.ClientSize = new System.Drawing.Size(901, 571);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.splitContainer1);
             this.ForeColor = System.Drawing.SystemColors.ControlLightLight;

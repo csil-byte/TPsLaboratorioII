@@ -1,42 +1,30 @@
-﻿using Serializacion;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace Entidades
-{
+namespace Entidades {
     [Serializable]
-    public class Publicacion : Mercaderia
-    {
+    public class Publicacion : Mercaderia {
         private int tomos;
         public int[] idBarcosPublicaciones;
-        public enum Formato
-        {
+        public enum Formato {
             Digital,
             Hardbook,
         }
         /// <summary>
         /// Propiedad para el enumerado Formato de lectura y escritura
         /// </summary>
-        public Formato eFormato
-        {
+        public Formato eFormato {
             get; set;
         }
         /// <summary>
         /// Propiedad para el atributo tomos de lectura y escritura. En su setter verifica que no tenga un número negativo y lo settea en 1.
         /// </summary>
-        public int Tomos
-        {
-            get
-            {
+        public int Tomos {
+            get {
                 return this.tomos;
             }
-            set
-            {
-                if (tomos <= 0)
-                {
+            set {
+                if (value <= 0) {
                     this.tomos = 1;
                 }
             }
@@ -44,8 +32,7 @@ namespace Entidades
         /// <summary>
         /// Constructor de defecto para la clase Publicacion
         /// </summary>
-        public Publicacion() 
-        {
+        public Publicacion() {
 
         }
         /// <summary>
@@ -58,19 +45,16 @@ namespace Entidades
         /// <param name="editor"></param>
         /// <param name="codigo"></param>
         /// <param name="cantidad"></param>
-        public Publicacion (int tomos, Formato formato, string titulo, int edicion, string editor, string codigo, int cantidad) : base(titulo, edicion, editor, codigo, cantidad)        
-        {
+        public Publicacion(int tomos, Formato formato, string titulo, int edicion, string editor, string codigo, int cantidad) : base(titulo, edicion, editor, codigo, cantidad) {
             this.tomos = tomos;
             this.eFormato = formato;
         }
 
-        public override void obtenenerIdBarcos(int[] idBarcos)
-        {
+        public override void obtenenerIdBarcos(int[] idBarcos) {
             this.idBarcosPublicaciones = idBarcos;
         }
 
-        public override string ToString()
-        {
+        public override string ToString() {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(string.Format("Titulo: {0}", this.Titulo));
             sb.AppendLine(string.Format("Edición: {0}", this.Edicion));

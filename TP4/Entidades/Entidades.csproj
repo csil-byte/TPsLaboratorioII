@@ -52,6 +52,7 @@
     <Compile Include="Cliente\Cliente.cs" />
     <Compile Include="Controller.cs" />
     <Compile Include="ControllerDAO.cs" />
+    <Compile Include="ControllerDaoExcepcion.cs" />
     <Compile Include="Mercaderias\Carta.cs" />
     <Compile Include="Mercaderias\Mercaderia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

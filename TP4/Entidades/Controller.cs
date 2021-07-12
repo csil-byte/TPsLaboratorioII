@@ -1,26 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Serializacion;
 
 
-namespace Entidades
-{
-    public static class Controller
-    {
+namespace Entidades {
+    public static class Controller {
         /// <summary>
         /// Itera sobre lista de barcos hasta encontrar el pasado por parametro y retorna su ID.
         /// </summary>
         /// <param name="nombreBarco"></param>
         /// <returns></returns>
-        public static int BuscarBarcoPorId(string nombreBarco)
-        {
-            foreach (Barco barco in Stock.Barcos)
-            {
-                if (nombreBarco == barco.NombreBarco)
-                {
+        public static int BuscarBarcoPorId(string nombreBarco) {
+            foreach (Barco barco in Stock.Barcos) {
+                if (nombreBarco == barco.NombreBarco) {
                     return barco.IdBarco;
                 }
             }
@@ -31,24 +22,17 @@ namespace Entidades
         /// </summary>
         /// <param name="idBarcos"></param>
         /// <param name="pub"></param>
-        public static void AgregarPublicacionesABarcos(int[] idBarcos, Publicacion pub)
-        {
-            try
-            {
-                for (int i = 0; i < Stock.Barcos.Count; i++)
-                {
+        public static void AgregarPublicacionesABarcos(int[] idBarcos, Publicacion pub) {
+            try {
+                for (int i = 0; i < Stock.Barcos.Count; i++) {
                     pub.obtenenerIdBarcos(idBarcos);
-                    foreach (Barco barquito in Stock.Barcos)
-                    {
-                        if (pub.idBarcosPublicaciones[i] == barquito.IdBarco)
-                        {
+                    foreach (Barco barquito in Stock.Barcos) {
+                        if (pub.idBarcosPublicaciones[i] == barquito.IdBarco) {
                             barquito.publicaciones.Add(pub);
                         }
                     }
                 }
-            }
-            catch (Exception e)
-            {
+            } catch (Exception e) {
 
             }
         }
@@ -57,24 +41,17 @@ namespace Entidades
         /// </summary>
         /// <param name="idBarcos"></param>
         /// <param name="carta"></param>
-        public static void AgregarCartasABarcos(int[] idBarcos, Carta carta)
-        {
-            try
-            {
-                for (int i = 0; i < Stock.Barcos.Count; i++)
-                {
+        public static void AgregarCartasABarcos(int[] idBarcos, Carta carta) {
+            try {
+                for (int i = 0; i < Stock.Barcos.Count; i++) {
                     carta.obtenenerIdBarcos(idBarcos);
-                    foreach (Barco barquito in Stock.Barcos)
-                    {
-                        if (carta.idBarcosCartas[i] == barquito.IdBarco)
-                        {
+                    foreach (Barco barquito in Stock.Barcos) {
+                        if (carta.idBarcosCartas[i] == barquito.IdBarco) {
                             barquito.cartas.Add(carta);
                         }
                     }
                 }
-            }
-            catch (Exception e)
-            { }
+            } catch (Exception e) { }
 
         }
         /// <summary>
@@ -82,19 +59,21 @@ namespace Entidades
         /// </summary>
         /// <param name="listaClientes"></param>
         /// <param name="listaBarcos"></param>      
-        public static void ObtenerBarcosPorCadaCliente(List<Clientes> listaClientes, List<Barco> listaBarcos)
-        {
-            foreach (Barco barquito in listaBarcos)
-            {
-                foreach (Clientes clientesito in listaClientes)
-                {
-                    if (barquito.IdCliente == clientesito.IdCliente)
-                    {
+        public static void ObtenerBarcosPorCadaCliente(List<Clientes> listaClientes, List<Barco> listaBarcos) {
+            foreach (Barco barquito in listaBarcos) {
+                foreach (Clientes clientesito in listaClientes) {
+                    if (barquito.IdCliente == clientesito.IdCliente) {
                         clientesito.barcos.Add(barquito);
                     }
                 }
             }
         }
-     
+
+
+
+
+
+
+
     }
 }

@@ -66,3 +66,37 @@ C:\Users\user\source\repos\TPs\TP4\VistaForm\obj\Debug\VistaForm.Nuevas_Edicione
 C:\Users\user\source\repos\TPs\TP4\VistaForm\bin\Debug\BouncyCastle.Crypto.dll
 C:\Users\user\source\repos\TPs\TP4\VistaForm\bin\Debug\itextsharp.dll
 C:\Users\user\source\repos\TPs\TP4\VistaForm\bin\Debug\itextsharp.xml
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\bin\Debug\VistaForm.exe.config
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\bin\Debug\VistaForm.exe
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\bin\Debug\VistaForm.pdb
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\bin\Debug\Entidades.dll
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\bin\Debug\itextsharp.dll
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\bin\Debug\LiveCharts.dll
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\bin\Debug\Serializacion.dll
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\bin\Debug\Entidades.pdb
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\bin\Debug\Serializacion.pdb
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\bin\Debug\itextsharp.xml
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\bin\Debug\LiveCharts.pdb
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\bin\Debug\LiveCharts.xml
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\obj\Debug\VistaForm.csproj.AssemblyReference.cache
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\obj\Debug\VistaForm.FrmInicioPrograma.resources
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\obj\Debug\VistaForm.Nuevas_Ediciones.FrmInformeCompras_ElegirFormato.resources
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\obj\Debug\VistaForm.Nuevas_Ediciones.FrmNuevasEdiciones_ElegirTabla.resources
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\obj\Debug\VistaConsola.Frm_CircularClientes.resources
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\obj\Debug\VistaForm.Frm_Mercaderia.resources
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\obj\Debug\VistaForm.Frm_NuevasEdiciones.resources
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\obj\Debug\VistaForm.Frm_Stock.resources
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\obj\Debug\VistaConsola.InformeCompras.resources
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\obj\Debug\VistaForm.Properties.Resources.resources
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\obj\Debug\VistaForm.csproj.GenerateResource.cache
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\obj\Debug\VistaForm.csproj.CoreCompileInputs.cache
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\obj\Debug\VistaForm.csproj.CopyComplete
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\obj\Debug\VistaForm.exe
+C:\Users\user\Downloads\TP4 Cecilia Silva 2D\Ceci_TPsLaboratorioII-master\TPsLaboratorioII-master\TP4\VistaForm\obj\Debug\VistaForm.pdb
